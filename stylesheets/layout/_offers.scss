@@ -1,0 +1,16 @@
+.offers {
+    font-family: $body-font;
+    width: $maxwidth;
+    padding-bottom: 66px;
+    &__title {
+        font-size: 24px;
+        font-style: normal;
+        margin: 20px;
+    }
+    &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    }
+}

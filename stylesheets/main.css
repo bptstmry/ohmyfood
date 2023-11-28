@@ -1,3 +1,8 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -127,6 +132,23 @@ header .location__form input {
   align-items: center;
 }
 
+.offers {
+  font-family: roboto;
+  width: 375px;
+  padding-bottom: 66px;
+}
+.offers__title {
+  font-size: 24px;
+  font-style: normal;
+  margin: 20px;
+}
+.offers__card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
 .btn input {
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   width: 218px;
@@ -162,4 +184,36 @@ header .location__form input {
   align-items: center;
   color: white;
   font-size: 14px;
+}
+
+.card {
+  width: 340px;
+  height: 251px;
+  font-family: roboto;
+}
+.card img {
+  height: 174px;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  box-sizing: content-box;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .content__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 16px 13px 60px 12px;
+}
+.card .content__txt .card__title {
+  width: 267px;
+  height: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.card .content__txt .card__subtitle {
+  width: 247px;
+  height: 24px;
+  font-size: 17px;
+  font-weight: 300;
 }/*# sourceMappingURL=main.css.map */
