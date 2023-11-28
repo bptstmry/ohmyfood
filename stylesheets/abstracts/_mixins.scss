@@ -2,6 +2,7 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+// mixin flexbox center with argument = gap
 @mixin center($gap) {
     display: flex;
     justify-content: center;
@@ -9,6 +10,7 @@
     gap: $gap;
 }
 
+// search within style
 @mixin nostyle_inputsearch {
     border: none;
     font-family: roboto;
@@ -19,7 +21,11 @@
 }
 
 // for test
-
 @mixin testborder {
     border: solid 1px;
+}
+
+// liner-gradient background btn
+@mixin btn-background {
+    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 }

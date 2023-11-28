@@ -86,12 +86,12 @@ header .location__form input {
 }
 
 .headline {
-  height: 440px;
+  height: 287px;
   width: 375px;
-  background-color: red;
   font-family: roboto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .headline h1 {
@@ -107,4 +107,16 @@ header .location__form input {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
+}
+
+.btn input {
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  width: 218px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  margin-top: 27px;
+  font-size: 16px;
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */

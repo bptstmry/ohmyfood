@@ -3,12 +3,12 @@
 // -----------------------------------------------------------------------------
 
 .headline {
-    height: 440px;
+    height: 287px;
     width: $maxwidth;
-    background-color: red;
     font-family: $body-font;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     h1 {
         height: 68px;

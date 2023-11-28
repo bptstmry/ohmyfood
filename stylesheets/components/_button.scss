@@ -1,3 +1,19 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+// btn homepage cta
+.btn {
+    input {
+        @include btn-background;
+        width: 218px;
+        height: 50px;
+        border: none;
+        border-radius: 50px;
+        color: white;
+        // space between notice and btn
+        margin-top: 27px;
+        font-size: $body-font-size;
+        font-weight: $body-font-weight;
+    }
+}
