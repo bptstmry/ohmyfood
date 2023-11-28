@@ -1,0 +1,17 @@
+.menu {
+    width: $maxwidth;
+    height: 440px;
+    font-family: $body-font;
+    h1 {
+        height: 31px;
+        width: 275px;
+        padding: 48px 80px 26px 20px;
+        font-size: $h1-font-size;
+        font-weight: $h1-font-wight;
+    }
+    &__bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
