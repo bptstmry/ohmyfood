@@ -1,3 +1,26 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+footer {
+    height: 186px;
+    width: 375px;
+    padding: 22px;
+    background-color: #353535;
+    color: white;
+    font-family: $body-font;
+    .logo {
+        width: 137px;
+        height: 27px;
+        filter: brightness(300);
+        margin-bottom: 16px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .fa-solid {
+        margin-right: 11px; 
+        }
+    }
+}

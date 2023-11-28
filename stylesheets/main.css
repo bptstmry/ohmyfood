@@ -90,6 +90,29 @@ header .location__form input {
   background-color: transparent;
 }
 
+footer {
+  height: 186px;
+  width: 375px;
+  padding: 22px;
+  background-color: #353535;
+  color: white;
+  font-family: roboto;
+}
+footer .logo {
+  width: 137px;
+  height: 27px;
+  filter: brightness(300);
+  margin-bottom: 16px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer ul .fa-solid {
+  margin-right: 11px;
+}
+
 .headline {
   height: 287px;
   width: 375px;
