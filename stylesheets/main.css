@@ -1,3 +1,110 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /**
  * Basic typography style for copy text
- *//*# sourceMappingURL=main.css.map */
+ */
+header {
+  height: 113px;
+  width: 375px;
+}
+header .frame {
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+header .frame__logo {
+  width: 162px;
+  height: 36px;
+}
+header .location {
+  background-color: #EAEAEA;
+  box-shadow: inset 0px 7px 13px 0px rgba(0, 0, 0, 0.1);
+  width: 375px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+header .location__form input {
+  border: none;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 16px;
+  width: 130px;
+  background-color: transparent;
+}
+
+.headline {
+  height: 440px;
+  width: 375px;
+  background-color: red;
+  font-family: roboto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headline h1 {
+  height: 68px;
+  width: 275px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.headline h2 {
+  height: 46px;
+  width: 315px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}/*# sourceMappingURL=main.css.map */

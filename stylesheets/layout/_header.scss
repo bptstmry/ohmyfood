@@ -2,3 +2,28 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
+header {
+    height: 113px;
+    width: $maxwidth;
+    .frame {
+        height: 63px;
+        @include center(0);
+        &__logo {
+            width: 162px;
+            height: 36px;
+        }
+    }
+    .location {
+        background-color: $grey2;
+        // review
+        box-shadow: inset 0px 7px 13px 0px rgba(0,0,0,0.1); 
+        width: $maxwidth;
+        height: 50px;
+        @include center(17px);
+        &__form {
+            input {
+                @include nostyle_inputsearch;
+            }
+        }
+    }
+}

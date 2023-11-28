@@ -1,3 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
+
+@mixin center($gap) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin nostyle_inputsearch {
+    border: none;
+    font-family: roboto;
+    font-weight: $body-font-weight;
+    font-size: $body-font-size;
+    width: 130px;
+    background-color: transparent;
+}
+
+// for test
+
+@mixin testborder {
+    border: solid 1px;
+}
