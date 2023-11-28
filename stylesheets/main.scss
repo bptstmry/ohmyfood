@@ -17,6 +17,9 @@
 // 4. Layout-related sections
 @use 'layout/header';
 @use 'layout/footer';
+@use 'layout/headline';
+@use 'layout/menu';
+@use 'layout/offers';
 
 // 5. Components
 @use 'components/button';
