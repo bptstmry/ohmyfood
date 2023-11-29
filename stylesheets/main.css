@@ -236,6 +236,7 @@ footer ul .fa-solid {
   font-family: roboto;
   background-color: white;
   border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .card img {
   height: 174px;
