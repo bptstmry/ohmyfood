@@ -2,11 +2,15 @@
     font-family: $body-font;
     width: $maxwidth;
     padding-bottom: 66px;
+    background-color: #F6F6F6;
+    padding-top: 54px;
     &__title {
         font-size: 24px;
-        font-style: normal;
-        margin: 20px;
-    }
+        font-weight: 700;
+        margin-left: 20px;
+        margin-bottom: 24px;
+        }
+    // card disposition
     &__card {
     display: flex;
     flex-direction: column;

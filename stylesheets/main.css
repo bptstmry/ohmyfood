@@ -64,39 +64,43 @@ header .frame {
   height: 63px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 0;
+  position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 header .frame__logo {
-  width: 162px;
+  width: 165px;
   height: 36px;
+  padding: 14px 16px 13px;
 }
 header .location {
   background-color: #EAEAEA;
-  box-shadow: inset 0px 7px 13px 0px rgba(0, 0, 0, 0.1);
   width: 375px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 17px;
+  color: #353535;
 }
 header .location__form input {
   border: none;
-  font-family: roboto;
   font-weight: 500;
   font-size: 16px;
   width: 130px;
   background-color: transparent;
+  color: #353535;
+  padding: 0px;
+  font-family: roboto;
 }
 
 footer {
   height: 186px;
-  width: 375px;
+  width: 331px;
   padding: 22px;
   background-color: #353535;
   color: white;
   font-family: roboto;
+  font-weight: 500;
 }
 footer .logo {
   width: 137px;
@@ -107,20 +111,20 @@ footer .logo {
 footer ul {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 7px;
 }
 footer ul .fa-solid {
   margin-right: 11px;
 }
 
 .headline {
-  height: 287px;
   width: 375px;
   font-family: roboto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 39px;
   align-items: center;
+  background-color: #F6F6F6;
 }
 .headline h1 {
   height: 68px;
@@ -135,17 +139,17 @@ footer ul .fa-solid {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
+  color: #353535;
 }
 
 .menu {
   width: 375px;
-  height: 440px;
   font-family: roboto;
 }
 .menu h1 {
   height: 31px;
   width: 275px;
-  padding: 48px 80px 26px 20px;
+  margin: 48px 80px 26px 20px;
   font-size: 24px;
   font-weight: 700;
 }
@@ -153,17 +157,22 @@ footer ul .fa-solid {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 25px;
+  padding-bottom: 68px;
 }
 
 .offers {
   font-family: roboto;
   width: 375px;
   padding-bottom: 66px;
+  background-color: #F6F6F6;
+  padding-top: 54px;
 }
 .offers__title {
   font-size: 24px;
-  font-style: normal;
-  margin: 20px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-bottom: 24px;
 }
 .offers__card {
   display: flex;
@@ -179,27 +188,37 @@ footer ul .fa-solid {
   border: none;
   border-radius: 25px;
   color: white;
+  padding: 0px;
   margin-top: 27px;
+  margin-bottom: 57px;
   font-size: 16px;
   font-weight: 500;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.menu__bar__button input {
+.menu__bar__button .input {
   width: 322px;
   height: 72px;
+  padding: 0px;
   border: none;
   border-radius: 20px;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   font-size: 16px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.menu__bar__button .input .fa-solid {
+  margin-right: 27px;
+  font-size: 19px;
+  color: #7E7E7E;
+  padding-bottom: 7px;
 }
 .menu__bar__button__round {
   width: 24px;
   height: 24px;
   background-color: #9356DC;
-  position: relative;
-  top: 50px;
   border-radius: 50px;
   right: 10px;
   display: flex;
@@ -207,12 +226,16 @@ footer ul .fa-solid {
   align-items: center;
   color: white;
   font-size: 14px;
+  margin-left: -11px;
+  margin-right: 23px;
 }
 
 .card {
   width: 340px;
   height: 251px;
   font-family: roboto;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
 }
 .card img {
   height: 174px;
@@ -222,11 +245,14 @@ footer ul .fa-solid {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.card .content {
+  display: flex;
+}
 .card .content__txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin: 16px 13px 60px 12px;
+  margin: 16px 13px 12px 13px;
 }
 .card .content__txt .card__title {
   width: 267px;
@@ -239,4 +265,9 @@ footer ul .fa-solid {
   height: 24px;
   font-size: 17px;
   font-weight: 300;
+}
+.card .content i {
+  display: block;
+  font-size: 22px;
+  margin: 23px 25px 33px 0px;
 }/*# sourceMappingURL=main.css.map */

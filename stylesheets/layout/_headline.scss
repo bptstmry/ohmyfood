@@ -3,13 +3,14 @@
 // -----------------------------------------------------------------------------
 
 .headline {
-    height: 287px;
     width: $maxwidth;
     font-family: $body-font;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
+    padding-top: 39px;
     align-items: center;
+    background-color: #F6F6F6;
     h1 {
         height: 68px;
         width: 275px;
@@ -23,5 +24,6 @@
         text-align: center;
         font-size: $h2-font-size;
         font-weight: $h2-font-weight;
+        color: #353535;
     }
 }

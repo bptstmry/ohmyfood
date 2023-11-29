@@ -4,11 +4,13 @@
 
 footer {
     height: 186px;
-    width: 375px;
+    // need review, because of padding = not right width
+    width: 331px;
     padding: 22px;
     background-color: #353535;
     color: white;
     font-family: $body-font;
+    font-weight: 500;
     .logo {
         width: 137px;
         height: 27px;
@@ -18,7 +20,7 @@ footer {
     ul {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 7px;
         .fa-solid {
         margin-right: 11px; 
         }

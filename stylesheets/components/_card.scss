@@ -2,6 +2,8 @@
     width: 340px;
     height: 251px;
     font-family: $body-font;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
     img {
         height: 174px;
         width: 100%;
@@ -10,11 +12,12 @@
         object-fit: cover;
     }
     .content {
+        display: flex;
         &__txt {
             display: flex;
             flex-direction: column;
             gap: 5px;
-            margin: 16px 13px 60px 12px;
+            margin: 16px 13px 12px 13px;
             .card__title {
                 width: 267px;
                 height: 20px;
@@ -27,6 +30,11 @@
                 font-size: 17px;
                 font-weight: 300;
             }
+        }
+        i {
+            display: block;
+            font-size: 22px;
+            margin: 23px 25px 33px 0px;
         }
 
     }

@@ -11,32 +11,43 @@
         border: none;
         border-radius: 25px;
         color: white;
+        padding: 0px;
         // space between notice and btn
         margin-top: 27px;
+        margin-bottom: 57px;
         font-size: $body-font-size;
         font-weight: $body-font-weight;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0,0.25);
     }
 }
 
-//btn menu cta
+//btn menu
 .menu__bar {
     &__button {
-    input {
+    .input {
         width: 322px;
         height: 72px;
+        padding: 0px;
         border: none;
         border-radius: 20px;
         background-color: #F6F6F6;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0,0.15);
         font-size: $body-font-size;
-        font-weight: $body-font-weight; 
+        font-weight: $body-font-weight;
+        display: flex;
+        align-items: center;
+        .fa-solid {
+            margin-right: 27px;
+            font-size: 19px;
+            color: #7E7E7E;
+            padding-bottom: 7px;
+        } 
     }
+    
     &__round {
         width: 24px;
         height: 24px;
         background-color: #9356DC;
-        position: relative;
-        top: 50px;
         border-radius: 50px;
         right: 10px;
         display: flex;
@@ -44,6 +55,8 @@
         align-items: center;
         color: white;
         font-size: 14px;
+        margin-left: -11px;
+        margin-right: 23px;
     }
     }
 }

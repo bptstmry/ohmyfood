@@ -13,11 +13,14 @@
 // search within style
 @mixin nostyle_inputsearch {
     border: none;
-    font-family: roboto;
     font-weight: $body-font-weight;
     font-size: $body-font-size;
     width: 130px;
     background-color: transparent;
+    color: #353535;
+    padding: 0px;
+    font-family: roboto;
+
 }
 
 // for test
