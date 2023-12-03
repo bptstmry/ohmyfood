@@ -1,0 +1,43 @@
+// .card {
+//     .heart {
+//         .fa-solid {
+//             display: none;
+//         }
+//     }
+//         .heart:hover {
+
+//         .fa-heart { 
+//             display: none;
+//         }
+//         .fa-solid {
+//             display:inline-block;
+//             background-image: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+//             -webkit-background-clip: text;
+//             color: transparent;
+//         }
+
+//         .fa-solid:active {
+//         }
+//     }
+// }
+
+.card {
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label .fa-solid {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked + label .fa-solid {
+        display:inherit;
+        background-image: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    input[type="checkbox"]:checked + label .fa-regular {
+        display: none;
+    }
+}

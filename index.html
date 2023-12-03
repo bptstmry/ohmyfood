@@ -35,19 +35,19 @@
             <div class="menu__bar">
                 <div class="menu__bar__button">
                     <button type="button" class="input">
-                        <div class="menu__bar__button__round">1</div>
+                        <div class="menu__bar__button__round"></div>
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         Choisissez un restaurant</button>
                 </div>
                 <div class="menu__bar__button">
                     <button type="button" class="input">
-                        <div class="menu__bar__button__round">2</div>
+                        <div class="menu__bar__button__round"></div>
                         <i class="fa-solid fa-list"></i>
                         Composez votre menu</button>
                 </div>
                 <div class="menu__bar__button">
                     <button type="button" class="input">
-                        <div class="menu__bar__button__round">3</div>
+                        <div class="menu__bar__button__round"></div>
                         <i class="fa-solid fa-store"></i></i>
                         Dégustez au restaurant</button>
                 </div>
@@ -60,25 +60,35 @@
            <div class="offers__card">
             <a href="#">
             <article class="card">
+                <div class="badge">Nouveau</div>
                 <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                 <div class="content">
                     <div class="content__txt">
                         <h3 class="card__title">La palette du goût</h3>
                         <p class="card__subtitle">Ménilmontant</p>
                     </div>
-                    <i class="fa-regular fa-heart"></i>
+                    <input type="checkbox" id="like__input0" class="like__checkbox">
+                     <label for="like__input0" class="heart">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
                 </div>
              </article>
             </a>
             <a href="#">
                 <article class="card">
+                    <div class="badge">Nouveau</div>
                     <img src="assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
                     <div class="content">
                         <div class="content__txt">
                             <h3 class="card__title">La note enchantée</h3>
                             <p class="card__subtitle">Charonne</p>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <input type="checkbox" id="like__input1" class="like__checkbox" checked>
+                         <label for="like__input1" class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                        </label>
                     </div>
                  </article>
                 </a>
@@ -90,7 +100,11 @@
                                 <h3 class="card__title">À la française</h3>
                                 <p class="card__subtitle">Cité Rouge</p>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <input type="checkbox" id="like__input2" class="like__checkbox">
+                             <label for="like__input2" class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
                         </div>
                      </article>
                     </a>
@@ -102,7 +116,11 @@
                                     <h3 class="card__title">Le délice des sens</h3>
                                     <p class="card__subtitle">Folie-Méricourt</p>
                                 </div>
-                                <i class="fa-regular fa-heart"></i>
+                                <input type="checkbox" id="like__input3" class="like__checkbox">
+                                <label for="like__input3" class="heart">
+                                     <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </label>
                             </div>
                          </article>
                         </a>
