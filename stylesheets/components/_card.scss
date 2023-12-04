@@ -6,6 +6,11 @@
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
     position: relative;
+    transition: box-shadow 500ms;
+    &:hover {
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.20);
+
+    }
     img {
         height: 174px;
         width: 100%;
