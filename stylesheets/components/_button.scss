@@ -32,10 +32,15 @@
 .menu__bar {
     counter-reset: ordre;
     &__button {
+        display: flex;
+        align-items: center;
+        margin-left: 28px;
+        margin-right: 28px;
     .input {
-        width: 322px;
+        // width: 322px;
+        width:100%;
         height: 72px;
-        padding: 0px;
+        // padding: 0px;
         border: none;
         border-radius: 20px;
         background-color: #F6F6F6;
@@ -43,7 +48,9 @@
         font-size: $body-font-size;
         font-weight: $body-font-weight;
         display: flex;
+        justify-content: center;
         align-items: center;
+        // box-sizing: border-box;
         .fa-solid {
             margin-right: 27px;
             font-size: 19px;
@@ -53,18 +60,20 @@
     }
     
     &__round {
+        position: relative;
         width: 24px;
         height: 24px;
         background-color: #9356DC;
         border-radius: 50px;
-        right: 10px;
+        // right: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: white;
         font-size: 14px;
-        margin-left: -11px;
-        margin-right: 23px;
+        // margin-left: -11px;
+        // margin-right: 23px;
+        margin-right: -10px;
         counter-increment: ordre;
     }
     &__round::before {
@@ -72,3 +81,13 @@
     }
     }
 }
+
+@media only screen and (min-width: 901px) {
+   .menu__bar {
+    &__button {
+        width: 100%;
+        margin: 0;
+    }
+
+   }
+  }

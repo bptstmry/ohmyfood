@@ -156,11 +156,21 @@ footer ul .fa-solid {
 .menu__bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 25px;
   padding-bottom: 68px;
 }
 
+@media only screen and (min-width: 901px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  .menu__bar {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .offers {
   font-family: roboto;
   width: 100%;
@@ -181,6 +191,17 @@ footer ul .fa-solid {
   align-items: center;
 }
 
+@media only screen and (min-width: 901px) {
+  .offers__card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .offers .grid {
+    display: flex;
+    justify-content: center;
+  }
+}
 .btn input {
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   width: 218px;
@@ -204,10 +225,15 @@ footer ul .fa-solid {
 .menu__bar {
   counter-reset: ordre;
 }
+.menu__bar__button {
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  margin-right: 28px;
+}
 .menu__bar__button .input {
-  width: 322px;
+  width: 100%;
   height: 72px;
-  padding: 0px;
   border: none;
   border-radius: 20px;
   background-color: #F6F6F6;
@@ -215,6 +241,7 @@ footer ul .fa-solid {
   font-size: 16px;
   font-weight: 500;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .menu__bar__button .input .fa-solid {
@@ -224,24 +251,29 @@ footer ul .fa-solid {
   padding-bottom: 7px;
 }
 .menu__bar__button__round {
+  position: relative;
   width: 24px;
   height: 24px;
   background-color: #9356DC;
   border-radius: 50px;
-  right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 14px;
-  margin-left: -11px;
-  margin-right: 23px;
+  margin-right: -10px;
   counter-increment: ordre;
 }
 .menu__bar__button__round::before {
   content: counter(ordre);
 }
 
+@media only screen and (min-width: 901px) {
+  .menu__bar__button {
+    width: 100%;
+    margin: 0;
+  }
+}
 .card {
   width: 340px;
   height: 251px;

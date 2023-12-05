@@ -11,8 +11,22 @@
     &__bar {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         gap: 25px;
         padding-bottom: 68px;
     }
 }
+
+@media only screen and (min-width: 901px) {
+    .menu {
+        display: flex;
+        justify-content: center;
+
+        &__bar {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+      
+    }
+  }
