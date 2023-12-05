@@ -7,7 +7,7 @@
     font-family: $body-font;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     padding-top: 39px;
     align-items: center;
     background-color: #F6F6F6;
@@ -27,3 +27,26 @@
         color: #353535;
     }
 }
+@media only screen and (min-width: $break) {
+   .headline {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap:18px;
+    h1 {
+        width: 100%;
+        height: inherit;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+    }
+    h2 {
+        width: 100%;
+        height: inherit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+   }
+}
+

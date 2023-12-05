@@ -5,12 +5,13 @@
 footer {
     height: 186px;
     // need review, because of padding = not right width
-    width: 100%;
+    // width: 100%;
     padding: 22px;
     background-color: #353535;
     color: white;
     font-family: $body-font;
     font-weight: 500;
+    font-size: 16px;
     .logo {
         width: 137px;
         height: 27px;
@@ -26,3 +27,38 @@ footer {
         }
     }
 }
+@media only screen and (min-width: $break) {
+    footer {
+        height: 114px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 30px 25px;
+        gap: 16px;
+        .logo {
+            margin-bottom: inherit;
+        }
+        ul {
+            flex-direction: row;
+        }
+    }
+
+    ul, li {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li:nth-child(1) {
+        width: 191px;
+    }
+    li:nth-child(2) {
+        width: 191px;;
+    }
+    li:nth-child(3) {
+        width: 130px;
+    }
+    li:nth-child(4){
+        width: 130px;
+    }
+
+ }

@@ -4,6 +4,7 @@
     padding-bottom: 66px;
     background-color: #F6F6F6;
     padding-top: 54px;
+
     &__title {
         font-size: 24px;
         font-weight: 700;
@@ -19,16 +20,19 @@
     }
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: $break) {
     .offers {
       &__card {
         display: grid;
-        grid-template-columns: auto auto; 
-        grid-template-rows: auto auto;                         
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;                         
       }
+      // &__title {
+      //   margin-left: 180px;
+      // }
     .grid {
-        display: flex;
-        justify-content: center;
+      margin-right: 18px;
+      margin-left: 18px;
     }
     }
 }

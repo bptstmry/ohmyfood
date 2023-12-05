@@ -95,12 +95,12 @@ header .location__form input {
 
 footer {
   height: 186px;
-  width: 100%;
   padding: 22px;
   background-color: #353535;
   color: white;
   font-family: roboto;
   font-weight: 500;
+  font-size: 16px;
 }
 footer .logo {
   width: 137px;
@@ -117,11 +117,44 @@ footer ul .fa-solid {
   margin-right: 11px;
 }
 
+@media only screen and (min-width: 700px) {
+  footer {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 30px 25px;
+    gap: 16px;
+  }
+  footer .logo {
+    margin-bottom: inherit;
+  }
+  footer ul {
+    flex-direction: row;
+  }
+  ul, li {
+    display: flex;
+    flex-direction: row;
+  }
+  li:nth-child(1) {
+    width: 191px;
+  }
+  li:nth-child(2) {
+    width: 191px;
+  }
+  li:nth-child(3) {
+    width: 130px;
+  }
+  li:nth-child(4) {
+    width: 130px;
+  }
+}
 .headline {
   width: 100%;
   font-family: roboto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding-top: 39px;
   align-items: center;
   background-color: #F6F6F6;
@@ -142,13 +175,33 @@ footer ul .fa-solid {
   color: #353535;
 }
 
+@media only screen and (min-width: 700px) {
+  .headline {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 18px;
+  }
+  .headline h1 {
+    width: 100%;
+    height: inherit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .headline h2 {
+    width: 100%;
+    height: inherit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
 .menu {
-  width: 100%;
   font-family: roboto;
 }
 .menu h1 {
   height: 31px;
-  width: 275px;
   margin: 48px 80px 26px 20px;
   font-size: 24px;
   font-weight: 700;
@@ -160,15 +213,22 @@ footer ul .fa-solid {
   padding-bottom: 68px;
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 700px) {
   .menu {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-right: 18px;
+    margin-left: 18px;
   }
   .menu__bar {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+  .menu h1 {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .offers {
@@ -191,15 +251,15 @@ footer ul .fa-solid {
   align-items: center;
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 700px) {
   .offers__card {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
   .offers .grid {
-    display: flex;
-    justify-content: center;
+    margin-right: 18px;
+    margin-left: 18px;
   }
 }
 .btn input {
@@ -222,6 +282,11 @@ footer ul .fa-solid {
   opacity: 0.85;
 }
 
+@media only screen and (min-width: 700px) {
+  .btn input {
+    margin: inherit;
+  }
+}
 .menu__bar {
   counter-reset: ordre;
 }
@@ -243,6 +308,7 @@ footer ul .fa-solid {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 27px;
 }
 .menu__bar__button .input .fa-solid {
   margin-right: 27px;
@@ -268,14 +334,17 @@ footer ul .fa-solid {
   content: counter(ordre);
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 700px) {
+  .menu__bar .input {
+    justify-content: flex-start;
+  }
   .menu__bar__button {
     width: 100%;
     margin: 0;
   }
 }
 .card {
-  width: 340px;
+  width: 100%;
   height: 251px;
   font-family: roboto;
   background-color: white;
@@ -322,6 +391,11 @@ footer ul .fa-solid {
   margin: 23px 25px 33px 0px;
 }
 
+@media only screen and (min-width: 700px) {
+  .card {
+    height: inherit;
+  }
+}
 .card .badge {
   width: 80px;
   height: 29px;

@@ -27,7 +27,13 @@
         }
     }
 }
-
+@media only screen and (min-width: $break) {
+    .btn {
+        input {
+            margin: inherit;
+        }
+    }
+ }
 //btn menu
 .menu__bar {
     counter-reset: ordre;
@@ -51,6 +57,8 @@
         justify-content: center;
         align-items: center;
         // box-sizing: border-box;
+        padding-left: 27px;
+        // padding-right: 20px;
         .fa-solid {
             margin-right: 27px;
             font-size: 19px;
@@ -82,8 +90,11 @@
     }
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: $break) {
    .menu__bar {
+    .input {
+        justify-content: flex-start;
+    }
     &__button {
         width: 100%;
         margin: 0;
