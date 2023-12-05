@@ -20,20 +20,21 @@
     }
     .content {
         display: flex;
+        justify-content: space-between;
         &__txt {
             display: flex;
             flex-direction: column;
             gap: 5px;
             margin: 16px 13px 12px 13px;
             .card__title {
-                width: 267px;
-                height: 20px;
+                // width: 267px;
+                // height: 20px;
                 font-size: 18px;
                 font-weight: 700;
             }
             .card__subtitle {
-                width: 247px;
-                height: 24px;
+                // width: 247px;
+                // height: 24px;
                 font-size: 17px;
                 font-weight: 300;
             }
@@ -41,7 +42,9 @@
         i {
             display: block;
             font-size: 22px;
-            margin: 23px 25px 33px 0px;
+            // margin: 23px 25px 33px 0px;
+            margin-top: 23px;
+            margin-right: 28px;
         }
 
     }

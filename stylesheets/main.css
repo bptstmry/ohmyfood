@@ -117,7 +117,7 @@ footer ul .fa-solid {
   margin-right: 11px;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 740px) {
   footer {
     height: 114px;
     display: flex;
@@ -175,7 +175,7 @@ footer ul .fa-solid {
   color: #353535;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 740px) {
   .headline {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -213,7 +213,7 @@ footer ul .fa-solid {
   padding-bottom: 68px;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 740px) {
   .menu {
     display: flex;
     flex-direction: column;
@@ -238,6 +238,10 @@ footer ul .fa-solid {
   background-color: #F6F6F6;
   padding-top: 54px;
 }
+.offers .grid {
+  margin-right: 17px;
+  margin-left: 17px;
+}
 .offers__title {
   font-size: 24px;
   font-weight: 700;
@@ -248,10 +252,9 @@ footer ul .fa-solid {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  align-items: center;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 740px) {
   .offers__card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -282,7 +285,7 @@ footer ul .fa-solid {
   opacity: 0.85;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 740px) {
   .btn input {
     margin: inherit;
   }
@@ -334,7 +337,7 @@ footer ul .fa-solid {
   content: counter(ordre);
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 740px) {
   .menu__bar .input {
     justify-content: flex-start;
   }
@@ -366,6 +369,7 @@ footer ul .fa-solid {
 }
 .card .content {
   display: flex;
+  justify-content: space-between;
 }
 .card .content__txt {
   display: flex;
@@ -374,24 +378,21 @@ footer ul .fa-solid {
   margin: 16px 13px 12px 13px;
 }
 .card .content__txt .card__title {
-  width: 267px;
-  height: 20px;
   font-size: 18px;
   font-weight: 700;
 }
 .card .content__txt .card__subtitle {
-  width: 247px;
-  height: 24px;
   font-size: 17px;
   font-weight: 300;
 }
 .card .content i {
   display: block;
   font-size: 22px;
-  margin: 23px 25px 33px 0px;
+  margin-top: 23px;
+  margin-right: 28px;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 740px) {
   .card {
     height: inherit;
   }
@@ -401,10 +402,10 @@ footer ul .fa-solid {
   height: 29px;
   background-color: #99E2D0;
   position: absolute;
+  right: 25px;
+  top: 23px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  left: 248px;
-  top: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
