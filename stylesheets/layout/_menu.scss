@@ -1,6 +1,7 @@
 .menu {
-    // width: 100%;
+    width: 100%;
     font-family: $body-font;
+    box-sizing: border-box;
     h1 {
         height: 31px;
         margin: 48px 80px 26px 20px;
@@ -18,8 +19,6 @@
 
 @media only screen and (min-width: $break) {
     .menu {
-        display: flex;
-        flex-direction: column;
         margin-right: 18px;
         margin-left: 18px;
         // align-items: baseline;
@@ -27,6 +26,10 @@
         // margin-left: 180px;
         // padding-right: 10%;
         // padding-left: 10%;
+        .div {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
         &__bar {
             flex-direction: row;
