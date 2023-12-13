@@ -1,5 +1,6 @@
 .menu {
-    width: 100%;
+    // problem to fix - width
+    // width: 100%;
     font-family: $body-font;
     box-sizing: border-box;
     h1 {
@@ -7,6 +8,7 @@
         margin: 48px 80px 26px 20px;
         font-size: $h1-font-size;
         font-weight: $h1-font-wight;
+        // display: none;
         }
     &__bar {
         display: flex;
@@ -14,6 +16,7 @@
         // align-items: center;
         gap: 25px;
         padding-bottom: 68px;
+        // display: none;
     }
 }
 

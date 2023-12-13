@@ -1,148 +1,64 @@
-// .card {
-//     .heart {
-//         .fa-solid {
-//             display: none;
-//         }
-//     }
-//         .heart:hover {
-
-//         .fa-heart { 
-//             display: none;
-//         }
-//         .fa-solid {
-//             display:inline-block;
-//             background-image: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-//             -webkit-background-clip: text;
-//             color: transparent;
-//         }
-
-//         .fa-solid:active {
-//         }
-//     }
-// }
-
 .card {
-    .fa-heart {
-        cursor: pointer;
+    .content {
+        .fa-heart {
+            font-size: 23px;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label .fa-regular {
+            display: none;
+        }
+
+        label .fa-solid {
+            display: inherit;
+            background-image: linear-gradient(0deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
     }
-
-    input[type="checkbox"] {
-        display: none;
-    }
-
-    label .fa-solid {
-        display: none;
-        background-image: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-
-    // checkbox animation - active section
-
-    input[type="checkbox"]:checked + label .fa-solid {
-        display:inherit;
-        -webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-	        animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-    }
-    input[type="checkbox"]:checked + label .fa-regular {
-        position: absolute;
+input[type="checkbox"]:checked + label .fa-solid {
+    display: inherit;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+input[type="checkbox"]:not(:checked) + label .fa-solid {
+    display: inherit;
+}
+
+
+input[type="checkbox"]:not(:checked) + label .fa-regular {
+    display: inherit;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+input[type="checkbox"]:not(:checked) + label .fa-solid {
+    display: none;
+}
+
+@keyframes scale-in-center {
+    0% {
+        transform: scale(0);
         opacity: 0;
     }
-
-    @-webkit-keyframes slide-in-blurred-left {
-        0% {
-          -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-                  transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-          -webkit-transform-origin: 100% 50%;
-                  transform-origin: 100% 50%;
-          -webkit-filter: blur(40px);
-                  filter: blur(40px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-                  transform: translateX(0) scaleY(1) scaleX(1);
-          -webkit-transform-origin: 50% 50%;
-                  transform-origin: 50% 50%;
-          -webkit-filter: blur(0);
-                  filter: blur(0);
-          opacity: 1;
-        }
-      }
-      @keyframes slide-in-blurred-left {
-        0% {
-          -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-                  transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-          -webkit-transform-origin: 100% 50%;
-                  transform-origin: 100% 50%;
-          -webkit-filter: blur(40px);
-                  filter: blur(40px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-                  transform: translateX(0) scaleY(1) scaleX(1);
-          -webkit-transform-origin: 50% 50%;
-                  transform-origin: 50% 50%;
-          -webkit-filter: blur(0);
-                  filter: blur(0);
-          opacity: 1;
-        }
-      }
-      
-    //   checkbox animation - desactive section
-
-      input[type="checkbox"]:not(checked) + label .fa-solid{
-        display: inherit;
-        -webkit-animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) reverse both;
-	    animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) reverse both;
-      }
-      input[type="checkbox"]:not(checked) + label .fa-regular {
-        position: absolute;
-      }
-      @-webkit-keyframes slide-in-blurred-right {
-        0% {
-          -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-                  transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-          -webkit-transform-origin: 0% 50%;
-                  transform-origin: 0% 50%;
-          -webkit-filter: blur(40px);
-                  filter: blur(40px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-                  transform: translateX(0) scaleY(1) scaleX(1);
-          -webkit-transform-origin: 50% 50%;
-                  transform-origin: 50% 50%;
-          -webkit-filter: blur(0);
-                  filter: blur(0);
-          opacity: 1;
-        }
-      }
-      @keyframes slide-in-blurred-right {
-        0% {
-          -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-                  transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-          -webkit-transform-origin: 0% 50%;
-                  transform-origin: 0% 50%;
-          -webkit-filter: blur(40px);
-                  filter: blur(40px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-                  transform: translateX(0) scaleY(1) scaleX(1);
-          -webkit-transform-origin: 50% 50%;
-                  transform-origin: 50% 50%;
-          -webkit-filter: blur(0);
-                  filter: blur(0);
-          opacity: 1;
-        }
-      }
-      
-      
-      
-
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  

@@ -64,6 +64,10 @@
             font-size: 19px;
             color: #7E7E7E;
             padding-bottom: 7px;
+        }
+            .fa-store {
+                color: #9356DC;
+            }
         } 
     }
     
@@ -88,7 +92,7 @@
         content: counter(ordre);
     }
     }
-}
+
 
 @media only screen and (min-width: $break) {
    .menu__bar {

@@ -19,8 +19,11 @@
         object-fit: cover;
     }
     .content {
+        // >> the problem to fix is here <<
         display: flex;
         justify-content: space-between;
+        box-sizing: border-box;
+        // overflow-x:hidden;
         &__txt {
             display: flex;
             flex-direction: column;
