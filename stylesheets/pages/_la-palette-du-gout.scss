@@ -176,7 +176,7 @@ main {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    transition: transform 750ms ease-in-out;
+                    transition: transform 550ms ease-in-out;
                     transform: translateX(Opx);
                     overflow: hidden;
                     h3 {
@@ -228,7 +228,7 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 22px;
-    transition: transform 750ms ease-in-out;
+    transition: transform 550ms ease-in-out;
     transform: translateX(59px); 
     overflow: hidden;
 
@@ -241,3 +241,39 @@ main {
   .lb-checkbox:checked ~ .price {
     transform: translateX(-59px);
     }
+
+    .menusection {
+        opacity: 0;
+    }
+    @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .menusection {
+        animation: fade-in 300ms ease-in-out forwards; /* Utiliser l'animation avec une durée de 1 seconde et une fonction d'accélération */
+      }
+      
+      /* Appliquer un délai d'apparition décalé pour chaque élément de la classe fade-in-group */
+      .menusection:nth-child(1) {
+        animation-delay: 300ms;
+      }
+      
+      .menusection:nth-child(2) {
+        animation-delay: 600ms; /* Délai de 1 seconde pour le deuxième élément */
+      }
+      
+      .menusection:nth-child(3) {
+        animation-delay: 900ms; /* Délai de 2 secondes pour le troisième élément, et ainsi de suite */
+      }
+
+      .title {
+        opacity: 0;
+      }
+      .title {
+        animation: fade-in 300ms ease-in-out forwards; /* Utiliser l'animation avec une durée de 1 seconde et une fonction d'accélération */
+      }
