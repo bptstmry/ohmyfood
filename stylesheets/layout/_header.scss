@@ -1,17 +1,14 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
-
 header {
     height: 113px;
     width: 100%;
+
     .frame {
         height: 63px;
         display: flex;
         justify-content: center;
-        // above the other
-        position: relative;
+        position: relative; // above the other
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
         &__logo {
             width: 165px;
             height: 36px;
@@ -25,6 +22,7 @@ header {
         height: 50px;
         @include center(17px);
         color: #353535;
+
         &__form {
             input {
                 @include nostyle_inputsearch;
@@ -32,6 +30,3 @@ header {
         }
     }
 }
-@media only screen and (min-width: $break) {
-   
-    }

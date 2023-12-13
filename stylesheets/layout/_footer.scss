@@ -1,64 +1,58 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
-
 footer {
     height: 186px;
-    // need review, because of padding = not right width
-    // width: 100%;
     padding: 22px;
     background-color: #353535;
     color: white;
     font-family: $body-font;
     font-weight: 500;
     font-size: 16px;
+
     .logo {
         width: 137px;
         height: 27px;
         filter: brightness(300);
         margin-bottom: 16px;
     }
+
     ul {
         display: flex;
         flex-direction: column;
         gap: 7px;
+
         .fa-solid {
-        margin-right: 11px; 
+            margin-right: 11px;
         }
     }
-}
-@media only screen and (min-width: $break) {
-    footer {
+
+    @media only screen and (min-width: 768px) {
         height: inherit;
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-end;
         padding: 30px 25px;
         gap: 16px;
+    
         .logo {
             margin-bottom: inherit;
         }
+    
         ul {
             flex-direction: row;
+    
+            li {
+                display: flex;
+                flex-direction: row;
+    
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: 191px;
+                }
+    
+                &:nth-child(3),
+                &:nth-child(4) {
+                    width: 130px;
+                }
+            }
         }
     }
-
-    ul, li {
-        display: flex;
-        flex-direction: row;
-    }
-
-    li:nth-child(1) {
-        width: 191px;
-    }
-    li:nth-child(2) {
-        width: 191px;;
-    }
-    li:nth-child(3) {
-        width: 130px;
-    }
-    li:nth-child(4){
-        width: 130px;
-    }
-
- }
+}    

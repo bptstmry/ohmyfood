@@ -5,105 +5,98 @@
 // btn homepage cta
 .btn {
     input {
-        @include btn-background;
-        width: 218px;
-        height: 50px;
-        border: none;
-        border-radius: 25px;
-        color: white;
-        padding: 0px;
-        // space between notice and btn
-        margin-top: 27px;
-        margin-bottom: 57px;
-        font-size: $body-font-size;
-        font-weight: $body-font-weight;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0,0.25);
-        cursor: pointer;
-        transition: opacity 500ms, box-shadow 500ms;
-
-        
-        &:hover {
-            opacity: 0.85;
-            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0,0.50);
-        }
+      @include btn-background;
+      width: 218px;
+      height: 50px;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      padding: 0;
+      margin-top: 27px;
+      margin-bottom: 57px;
+      font-size: $body-font-size;
+      font-weight: $body-font-weight;
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transition: opacity 500ms, box-shadow 500ms;
+  
+      &:hover {
+        opacity: 0.85;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+      }
     }
-}
-@media only screen and (min-width: $break) {
-    .btn {
-        input {
-            margin: inherit;
-        }
+  
+    @media only screen and (min-width: $break) {
+      input {
+        margin: inherit;
+      }
     }
- }
+  }
+  
 //btn menu
 .menu__bar {
     counter-reset: ordre;
+  
     &__button {
-        display: flex;
-        align-items: center;
-        margin-left: 28px;
-        margin-right: 28px;
-    .input {
-        // width: 322px;
-        width:100%;
+      display: flex;
+      align-items: center;
+      margin: 0 28px;
+  
+      .input {
+        width: 100%;
         height: 72px;
-        // padding: 0px;
         border: none;
         border-radius: 20px;
         background-color: #F6F6F6;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0,0.15);
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
         font-size: $body-font-size;
         font-weight: $body-font-weight;
         display: flex;
         justify-content: center;
         align-items: center;
-        // box-sizing: border-box;
         padding-left: 27px;
-        // padding-right: 20px;
+  
         .fa-solid {
-            margin-right: 27px;
-            font-size: 19px;
-            color: #7E7E7E;
-            padding-bottom: 7px;
+          margin-right: 27px;
+          font-size: 19px;
+          color: #7E7E7E;
+          padding-bottom: 7px;
+  
+          &.fa-store {
+            color: #9356DC;
+          }
         }
-            .fa-store {
-                color: #9356DC;
-            }
-        } 
-    }
-    
-    &__round {
+      }
+  
+      &__round {
         position: relative;
         width: 24px;
         height: 24px;
         background-color: #9356DC;
-        border-radius: 50px;
-        // right: 10px;
+        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         color: white;
         font-size: 14px;
-        // margin-left: -11px;
-        // margin-right: 23px;
         margin-right: -10px;
         counter-increment: ordre;
+  
+        &::before {
+          content: counter(ordre);
+        }
+      }
     }
-    &__round::before {
-        content: counter(ordre);
-    }
-    }
-
-
-@media only screen and (min-width: $break) {
-   .menu__bar {
-    .input {
+  
+    @media only screen and (min-width: $break) {
+      .input {
         justify-content: flex-start;
-    }
-    &__button {
+      }
+  
+      &__button {
         width: 100%;
         margin: 0;
+      }
     }
-
-   }
   }
+  
