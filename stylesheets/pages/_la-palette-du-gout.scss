@@ -142,8 +142,7 @@ main {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
+                    transition: width 0.5s ease;
 
                     h3 {
                         font-family: Roboto;
@@ -152,6 +151,8 @@ main {
                         font-weight: 500;
                         line-height: normal;
                         text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
                     }
                     p {
                         font-family: Roboto;
@@ -160,6 +161,8 @@ main {
                         font-weight: 300;
                         line-height: normal;
                         text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
                     }
 
                 }
@@ -200,6 +203,9 @@ main {
         }
       .lb {
         transform: translateX(0);
+      }
+      .content {
+        width: 70%;
       }
     }
   }

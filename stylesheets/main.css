@@ -661,8 +661,7 @@ input[type=checkbox]:not(checked) + label .fa-solid {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  transition: width 0.5s ease;
 }
 .background .listcards .menusection__card .content h3 {
   font-family: Roboto;
@@ -671,6 +670,8 @@ input[type=checkbox]:not(checked) + label .fa-solid {
   font-weight: 500;
   line-height: normal;
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .background .listcards .menusection__card .content p {
   font-family: Roboto;
@@ -679,6 +680,8 @@ input[type=checkbox]:not(checked) + label .fa-solid {
   font-weight: 300;
   line-height: normal;
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .background .listcards .menusection__card .price {
   font-family: Roboto;
@@ -711,6 +714,9 @@ main .div2 {
 }
 .menusection__card:hover .lb {
   transform: translateX(0);
+}
+.menusection__card:hover .content {
+  width: 70%;
 }
 
 .lb-checkbox {
