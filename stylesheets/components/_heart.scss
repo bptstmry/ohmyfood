@@ -1,5 +1,4 @@
 .card {
-    .content {
         .fa-heart {
             font-size: 23px;
             cursor: pointer;
@@ -20,7 +19,6 @@
             -webkit-background-clip: text;
             color: transparent;
         }
-    }
 }
 
 input[type="checkbox"]:checked + label .fa-solid {
