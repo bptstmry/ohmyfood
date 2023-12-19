@@ -1,11 +1,9 @@
 footer {
     height: 186px;
     padding: 22px;
-    background-color: #353535;
-    color: white;
-    font-family: $body-font;
-    font-weight: 500;
-    font-size: 16px;
+    background-color: $charcoal-gray;
+    color:$white;
+    @include font($weight: 500, $size: 16px);
 
     .logo {
         width: 137px;
@@ -15,9 +13,7 @@ footer {
     }
 
     ul {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
+        @include flexbox($direction: column, $gap: 7px);
 
         .fa-solid {
             margin-right: 11px;
@@ -26,23 +22,16 @@ footer {
 
     @media only screen and (min-width: 768px) {
         height: inherit;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: flex-end;
         padding: 30px 25px;
-        gap: 16px;
+        @include flexbox($direction: row-reverse, $align: flex-end, $gap: 16px);
     
         .logo {
             margin-bottom: inherit;
         }
     
         ul {
-            flex-direction: row;
-    
-            li {
-                display: flex;
-                flex-direction: row;
-    
+            @include flexbox($direction: row);
+            li { 
                 &:nth-child(1),
                 &:nth-child(2) {
                     width: 191px;

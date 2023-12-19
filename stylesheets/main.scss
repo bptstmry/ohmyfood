@@ -8,11 +8,6 @@
 // 2. Vendors
 @import 'vendors/reset';
 
-// 3. Base stuff
-
-
-
-
 // 4. Layout-related sections
 @import 'layout/header';
 @import 'layout/footer';
@@ -29,7 +24,5 @@
 
 // 6. Page-specific styles
 @import 'pages/home';
-@import 'pages/la-palette-du-gout';
-
-// 7. Themes
+@import 'pages/restaurant-pages';
 

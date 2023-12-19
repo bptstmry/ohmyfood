@@ -11,26 +11,27 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
 $black: #000000;
-
-$black1: #101010;
 $white: #FFFFFF;
-$grey: #353535;
-$grey2: #EAEAEA;
 
-$background: #F6F6F6;
+$light-gray: #EAEAEA;
+$gray: #7E7E7E;
+$charcoal-gray: #353535;
+$dark-gray: #101010;
 
-$grey-tint4: #7E7E7E;
+$extra-light-gray: #F6F6F6;
 
-$green-font: #008766;
+$green: #008766;
 
 // colour plates artefacts
 
-$blue2: #003A68;
-$blue: #89C8FA;
+$navy-blue: #003A68;
+$light-blue: #89C8FA;
 
 // first font setting implementation - to clean
 
-$body-font-weight: 500;
+$font-weight-medium: 500;
+
+$small-font-size: 14px;
 
 $body-font-size: 16px;
 
@@ -46,8 +47,11 @@ $body-font: roboto;
 
 // width mobil-first max 375px - to clean
 
-$maxwidth: 375px;
-
-
+$maxwidth: 1400px;
 
 $break: 740px;
+
+// linear-gradient color //
+
+$gradient-purple-to-pink: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+$gradient-pink-to-purple: linear-gradient(0deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);

@@ -59,10 +59,11 @@ header {
 }
 header .frame {
   height: 63px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   position: relative;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 header .frame__logo {
   width: 165px;
@@ -70,10 +71,11 @@ header .frame__logo {
   padding: 14px 16px 13px;
 }
 header .location {
-  background-color: #EAEAEA;
   width: 100%;
   height: 50px;
+  background-color: #EAEAEA;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 17px;
@@ -94,10 +96,12 @@ footer {
   height: 186px;
   padding: 22px;
   background-color: #353535;
-  color: white;
-  font-family: roboto;
-  font-weight: 500;
+  color: #FFFFFF;
+  font-family: "Roboto";
   font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
 }
 footer .logo {
   width: 137px;
@@ -116,19 +120,16 @@ footer ul .fa-solid {
 @media only screen and (min-width: 768px) {
   footer {
     height: inherit;
+    padding: 30px 25px;
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
-    padding: 30px 25px;
     gap: 16px;
   }
   footer .logo {
     margin-bottom: inherit;
   }
   footer ul {
-    flex-direction: row;
-  }
-  footer ul li {
     display: flex;
     flex-direction: row;
   }
@@ -142,11 +143,14 @@ footer ul .fa-solid {
 
 .headline {
   width: 100%;
-  font-family: roboto;
+  padding-top: 39px;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 39px;
   align-items: center;
   background-color: #F6F6F6;
 }
@@ -154,15 +158,21 @@ footer ul .fa-solid {
   height: 68px;
   width: 275px;
   text-align: center;
+  font-family: "Roboto";
   font-size: 24px;
   font-weight: 700;
+  font-style: normal;
+  line-height: normal;
 }
 .headline h2 {
   height: 46px;
   width: 315px;
   text-align: center;
+  font-family: "Roboto";
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
   color: #353535;
 }
 @media only screen and (min-width: 740px) {
@@ -174,29 +184,38 @@ footer ul .fa-solid {
   .headline h1 {
     width: 100%;
     height: inherit;
+    font-family: "Roboto";
     font-size: 40px;
-    font-style: normal;
     font-weight: 700;
+    font-style: normal;
+    line-height: normal;
   }
   .headline h2 {
     width: 100%;
     height: inherit;
+    font-family: "Roboto";
     font-size: 18px;
-    font-style: normal;
     font-weight: 300;
+    font-style: normal;
     line-height: normal;
   }
 }
 
 .menu {
-  font-family: roboto;
   box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
 }
 .menu h1 {
   height: 31px;
   margin: 48px 80px 26px 20px;
+  font-family: "Roboto";
   font-size: 24px;
   font-weight: 700;
+  font-style: normal;
+  line-height: normal;
 }
 .menu__bar {
   display: flex;
@@ -206,42 +225,45 @@ footer ul .fa-solid {
 }
 @media only screen and (min-width: 740px) {
   .menu {
-    margin-right: 18px;
-    margin-left: 18px;
+    margin: 0 18px;
   }
   .menu .div {
     max-width: 1400px;
     margin: 0 auto;
   }
   .menu__bar {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
   .menu h1 {
     display: flex;
-    margin-left: 0;
-    margin-right: 0;
+    flex-direction: row;
+    margin: 0 0;
   }
 }
 
 .offers {
-  font-family: roboto;
   width: 100%;
-  padding-bottom: 66px;
-  background-color: #F6F6F6;
-  padding-top: 54px;
+  padding: 54px 0 66px 0;
   box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  background-color: #F6F6F6;
 }
 .offers .grid {
-  margin-right: 17px;
-  margin-left: 17px;
+  margin: 0 17px;
 }
 .offers__title {
+  margin: 0 0 24px 20px;
+  font-family: "Roboto";
   font-size: 24px;
   font-weight: 700;
-  margin-left: 20px;
-  margin-bottom: 24px;
+  font-style: normal;
+  line-height: normal;
 }
 .offers__card {
   display: flex;
@@ -259,25 +281,23 @@ footer ul .fa-solid {
     grid-template-rows: 1fr 1fr;
   }
   .offers .grid {
-    margin-right: 18px;
-    margin-left: 18px;
+    margin: 0 18px;
   }
 }
 
 .btn input {
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   width: 218px;
   height: 50px;
   border: none;
   border-radius: 25px;
-  color: white;
+  color: #FFFFFF;
   padding: 0;
-  margin-top: 27px;
-  margin-bottom: 57px;
-  font-size: 16px;
-  font-weight: 500;
+  margin: 27px 0 57px 0;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  font-size: 16px;
+  font-weight: 500;
   transition: opacity 500ms, box-shadow 500ms;
 }
 .btn input:hover {
@@ -294,53 +314,61 @@ footer ul .fa-solid {
   counter-reset: ordre;
 }
 .menu__bar__button {
-  display: flex;
-  align-items: center;
   margin: 0 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .menu__bar__button .input {
   width: 100%;
   height: 72px;
   border: none;
   border-radius: 20px;
-  background-color: #F6F6F6;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  padding-left: 27px;
+  background-color: #F6F6F6;
   font-size: 16px;
   font-weight: 500;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  padding-left: 27px;
 }
 .menu__bar__button .input .fa-solid {
   margin-right: 27px;
   font-size: 19px;
-  color: #7E7E7E;
   padding-bottom: 7px;
+  color: #7E7E7E;
 }
 .menu__bar__button .input .fa-solid.fa-store {
   color: #9356DC;
 }
 .menu__bar__button__round {
-  position: relative;
   width: 24px;
   height: 24px;
-  background-color: #9356DC;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 14px;
   margin-right: -10px;
   counter-increment: ordre;
+  background-color: #9356DC;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
 }
 .menu__bar__button__round::before {
   content: counter(ordre);
 }
 @media only screen and (min-width: 740px) {
   .menu__bar .input {
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
   }
   .menu__bar__button {
     width: 100%;
@@ -350,10 +378,10 @@ footer ul .fa-solid {
 
 .card {
   width: 100%;
-  font-family: roboto;
-  background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  font-family: roboto;
+  background-color: #FFFFFF;
   position: relative;
   transition: box-shadow 500ms;
 }
@@ -377,36 +405,45 @@ footer ul .fa-solid {
   box-sizing: border-box;
 }
 .card .content__txt {
+  padding: 16px 13px 12px 13px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 16px 13px 12px 13px;
 }
 .card .content__txt .card__title {
+  font-family: "Roboto";
   font-size: 18px;
   font-weight: 700;
+  font-style: normal;
+  line-height: normal;
 }
 .card .content__txt .card__subtitle {
+  font-family: "Roboto";
   font-size: 17px;
   font-weight: 300;
+  font-style: normal;
+  line-height: normal;
 }
 
 .card .badge {
   width: 80px;
   height: 29px;
-  background-color: #99E2D0;
-  position: absolute;
-  right: 25px;
-  top: 23px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: #99E2D0;
+  color: #008766;
+  position: absolute;
+  top: 23px;
+  right: 25px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 14px;
   font-weight: 500;
-  color: #008766;
+  font-style: normal;
+  line-height: normal;
 }
 
 .card .fa-heart {
@@ -464,48 +501,52 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
   }
 }
 .loader {
-  position: absolute;
   width: 100%;
   height: 100%;
-  background-color: white;
+  position: absolute;
+  z-index: 1;
+  background-color: #FFFFFF;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   animation: none-loader 2350ms forwards;
-  z-index: 1;
 }
-.loader .lettre {
+.loader .letter {
   color: black;
-  font-family: Shrikhand;
-  font-size: 50px;
-  animation: flash 1s linear forwards;
   letter-spacing: 0;
   padding: 0 12px;
-  position: relative;
   margin-right: -22px;
+  font-family: "Shrikhand";
+  font-size: 50px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  position: relative;
+  animation: flash 1s linear forwards;
 }
-.loader .lettre:nth-child(1) {
+.loader .letter:nth-child(1) {
   animation-delay: 0.2s;
 }
-.loader .lettre:nth-child(2) {
+.loader .letter:nth-child(2) {
   animation-delay: 0.3s;
 }
-.loader .lettre:nth-child(3) {
+.loader .letter:nth-child(3) {
   animation-delay: 0.4s;
 }
-.loader .lettre:nth-child(4) {
+.loader .letter:nth-child(4) {
   animation-delay: 0.5s;
 }
-.loader .lettre:nth-child(5) {
+.loader .letter:nth-child(5) {
   animation-delay: 0.6s;
 }
-.loader .lettre:nth-child(6) {
+.loader .letter:nth-child(6) {
   animation-delay: 0.7s;
 }
-.loader .lettre:nth-child(7) {
+.loader .letter:nth-child(7) {
   animation-delay: 0.8s;
 }
-.loader .lettre:nth-child(8) {
+.loader .letter:nth-child(8) {
   animation-delay: 0.9s;
 }
 
@@ -514,7 +555,7 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
     background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: 0 0 7px #9356DC;
+    text-shadow: 0 0 7px #9356dc;
   }
   100% {
     -webkit-background-clip: text;
@@ -535,7 +576,6 @@ header {
   height: inherit;
 }
 header .frame {
-  justify-content: space-between;
   align-items: center;
 }
 header .frame .fa-arrow-left {
@@ -549,8 +589,11 @@ header .frame__img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  box-sizing: border-box;
-  z-index: -1;
+}
+
+main .div2 {
+  display: flex;
+  justify-content: center;
 }
 
 main .background {
@@ -573,7 +616,7 @@ main .background .title {
   padding-bottom: 40px;
 }
 main .background .title .title__section h1 {
-  color: var(--Black, #101010);
+  color: #101010;
   font-family: Shrikhand;
   font-size: 28px;
   font-style: normal;
@@ -651,17 +694,14 @@ input[type=checkbox]:not(checked) + label .fa-solid {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
   background-color: white;
   border-radius: 15.043px;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
   overflow: hidden;
-}
-.background .listcards .menusection__card .content {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  transition: width 0.5s ease;
 }
 .background .listcards .menusection__card .content h3 {
   font-family: Roboto;
@@ -672,6 +712,7 @@ input[type=checkbox]:not(checked) + label .fa-solid {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  transition: width 550ms ease;
 }
 .background .listcards .menusection__card .content p {
   font-family: Roboto;
@@ -682,6 +723,7 @@ input[type=checkbox]:not(checked) + label .fa-solid {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  transition: width 550ms ease;
 }
 .background .listcards .menusection__card .price {
   font-family: Roboto;
@@ -689,26 +731,15 @@ input[type=checkbox]:not(checked) + label .fa-solid {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: transform 550ms ease-in-out;
   overflow: hidden;
-}
-.background .listcards .menusection__card .price h3 {
-  display: inline-block;
-  overflow: hidden;
-}
-
-main .div2 {
+  height: 100%;
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
+  background-color: white;
+  padding-right: 15px;
 }
 
-.menusection__card {
-  position: relative;
-  overflow: hidden;
-}
 .menusection__card:hover .price {
   transform: translateX(-59px);
 }
@@ -745,6 +776,10 @@ main .div2 {
 
 .lb-checkbox:checked ~ .price {
   transform: translateX(-59px);
+}
+
+.lb-checkbox:checked ~ .content {
+  width: 70%;
 }
 
 .menusection {

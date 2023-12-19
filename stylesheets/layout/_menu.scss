@@ -1,40 +1,33 @@
 .menu {
-    font-family: $body-font;
     box-sizing: border-box;
+    @include font;
 
     h1 {
         height: 31px;
         margin: 48px 80px 26px 20px;
-        font-size: $h1-font-size;
-        font-weight: $h1-font-wight;
+        @include font($size: 24px, $weight: 700);
     }
 
     &__bar {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
+        @include flexbox($direction: column, $gap: 25px);
         padding-bottom: 68px;
     }
 
     @media only screen and (min-width: $break) {
-        margin-right: 18px;
-        margin-left: 18px;
+        margin: 0 18px;
 
         .div {
-            max-width: 1400px;
+            max-width: $maxwidth;
             margin: 0 auto;
         }
 
         &__bar {
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            @include flexbox($justify: center, $align: center);
         }
 
         h1 {
-            display: flex;
-            margin-left: 0;
-            margin-right: 0;
+            @include flexbox;
+            margin: 0 0;
         }
     }
 }

@@ -1,28 +1,23 @@
 .headline {
     width: 100%;
-    font-family: $body-font;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-top: 39px;
-    align-items: center;
-    background-color: #F6F6F6;
+    @include font;
+    @include flexbox($direction: column, $justify: center, $align: center);
+    background-color: $extra-light-gray;
 
     h1 {
         height: 68px;
         width: 275px;
         text-align: center;
-        font-size: $h1-font-size;
-        font-weight: $h1-font-wight;
+        @include font($size: 24px, $weight: 700);
     }
 
     h2 {
         height: 46px;
         width: 315px;
         text-align: center;
-        font-size: $h2-font-size;
-        font-weight: $h2-font-weight;
-        color: #353535;
+        @include font($size: 18px, $weight: 700);
+        color: $charcoal-gray;
     }
 
     @media only screen and (min-width: $break) {
@@ -33,18 +28,13 @@
         h1 {
             width: 100%;
             height: inherit;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 700;
+            @include font($size: 40px, $weight: 700);
         }
 
         h2 {
             width: 100%;
             height: inherit;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
+            @include font($size: 18px, $weight: 300);
         }
     }
 }

@@ -1,10 +1,10 @@
 .card {
     width: 100%;
-    font-family: $body-font;
-    background-color: white;
     border-radius: 20px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    position: relative;
+    font-family: $body-font;
+    background-color:$white;
+    @include relative-position;
     transition: box-shadow 500ms;
   
     &:hover {
@@ -20,28 +20,22 @@
     }
 
     i {
-      position: absolute;
-      right: 20px;
-      bottom: 25px;
+      @include absolute-position($right:20px, $bottom:25px);
     }
   
     .content {
       box-sizing: border-box;
   
       &__txt {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
         padding: 16px 13px 12px 13px;
+        @include flexbox($direction: column, $gap: 5px);
   
         .card__title {
-          font-size: 18px;
-          font-weight: 700;
+          @include font($size: 18px, $weight: 700);
         }
   
         .card__subtitle {
-          font-size: 17px;
-          font-weight: 300;
+          @include font($size: 17px, $weight: 300);
         }
       }
   }

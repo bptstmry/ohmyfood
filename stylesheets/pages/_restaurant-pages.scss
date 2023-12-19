@@ -1,26 +1,39 @@
+// header section //
+
 header {
+    height: inherit;
 
     .frame {
-        justify-content: space-between;
         align-items: center;
+
         .fa-arrow-left {
             padding-left: 17px;
         }
+
         img {
             margin: auto;
         }
     }
-    height: inherit;
-        .frame__img {
-            img {
+
+    .frame__img {
+         img {
             height: 275px;
             width: 100%;
             object-fit: cover;
-            box-sizing: border-box;
-            z-index: -1;
-            }
+         }
         }
 }
+
+// center main section //
+
+main {
+    .div2 {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+// restaurant title section //
 
 main {
     .background {
@@ -34,15 +47,17 @@ main {
         flex-direction: column;
         align-items: center;
         max-width: 1400px;
+
         .title {
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 24px;
             padding-bottom: 40px;
+
             .title__section {
                 h1 {
-                    color: var(--Black, #101010);
+                    color: #101010;
                     font-family: Shrikhand;
                     font-size: 28px;
                     font-style: normal;
@@ -50,6 +65,7 @@ main {
                     line-height: normal;
                 }
             }
+
                 .fa-heart {
                     font-size: 23px;
                     cursor: pointer;
@@ -71,19 +87,21 @@ main {
                 }
             }
         }
-    }
+}
 
-    input[type="checkbox"]:checked + label .fa-solid {
+input[type="checkbox"]:checked + label .fa-solid {
                 display:inherit;
-    }
+}
 
-    input[type="checkbox"]:not(checked) + label .fa-solid {
+input[type="checkbox"]:not(checked) + label .fa-solid {
                 display: inherit;
-    }
+}
+
+
+// cards section //
 
 .background {
     .listcards {
-        // to set
         width: 90%;
         gap: 40px;
         display: flex;
@@ -133,17 +151,16 @@ main {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                padding: 15px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 15px;
                 background-color: white;
                 border-radius: 15.043px;
                 box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+                position: relative;
                 overflow: hidden;
-                .content {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    transition: width 0.5s ease;
 
+                .content {
                     h3 {
                         font-family: Roboto;
                         font-size: 18px;
@@ -153,6 +170,7 @@ main {
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
+                        transition: width 550ms ease;
                     }
                     p {
                         font-family: Roboto;
@@ -163,8 +181,8 @@ main {
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
+                        transition: width 550ms ease;
                     }
-
                 }
                 .price {
                     font-family: Roboto;
@@ -172,31 +190,22 @@ main {
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     transition: transform 550ms ease-in-out;
                     overflow: hidden;
-                    h3 {
-                        display: inline-block;
-                        overflow: hidden;
-                    }
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-end;
+                    background-color: white;
+                    padding-right: 15px;
                 }
             }
         }
     }
 }
 
-main {
-    .div2 {
-        display: flex;
-        justify-content: center;
-    }
-}
+// interaction with checkbox //
 
 .menusection__card {
-    position: relative;
-    overflow: hidden;
     &:hover {
         .price {
             transform: translateX(-59px);
@@ -239,6 +248,11 @@ main {
   .lb-checkbox:checked ~ .price {
     transform: translateX(-59px);
     }
+    .lb-checkbox:checked ~ .content {
+        width: 70%;
+    }
+
+// progressive animation //
 
     .menusection {
         opacity: 0;

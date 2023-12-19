@@ -15,7 +15,7 @@
 
         label .fa-solid {
             display: inherit;
-            background-image: linear-gradient(0deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
+            background-image: $gradient-pink-to-purple;
             -webkit-background-clip: text;
             color: transparent;
         }
