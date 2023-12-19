@@ -1,37 +1,33 @@
-.offers {
+.restaurants {
   width: 100%;
   padding: 54px 0 66px 0;
   box-sizing: border-box;
   @include font;
   background-color: $extra-light-gray;
 
-  .grid {
+  &__grid {
     margin: 0 17px;
   }
-
+  &__offers {
+    @include flexbox($direction: column, $gap: 18px);
+  }
   &__title {
     margin: 0 0 24px 20px;
     @include font($size: 24px, $weight: 700);
   }
 
-  &__card {
-    @include flexbox($direction: column, $gap: 18px);
-  }
-
   @media only screen and (min-width: $break) {
-    .div1 {
+    &--max {
       max-width: $maxwidth;
       margin: 0 auto;
     }
-
-    &__card {
+    &__grid {
+      margin: 0 18px;
+    }
+    &__offers {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-    }
-
-    .grid {
-      margin: 0 18px;
     }
   }
 }

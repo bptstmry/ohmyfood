@@ -1,42 +1,39 @@
-.card {
+.restaurants {
+  &__img {
+    height: 174px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    box-sizing: content-box;
+    object-fit: cover;
+  }
+  &__card {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     font-family: $body-font;
-    background-color:$white;
+    background-color: $white;
     @include relative-position;
     transition: box-shadow 500ms;
-  
-    &:hover {
-      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.20);
-    }
-  
-    img {
-      height: 174px;
-      width: 100%;
-      border-radius: 20px 20px 0 0;
-      box-sizing: content-box;
-      object-fit: cover;
-    }
 
-    i {
-      @include absolute-position($right:20px, $bottom:25px);
+    &:hover {
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
     }
-  
-    .content {
-      box-sizing: border-box;
-  
-      &__txt {
-        padding: 16px 13px 12px 13px;
-        @include flexbox($direction: column, $gap: 5px);
-  
-        .card__title {
-          @include font($size: 18px, $weight: 700);
-        }
-  
-        .card__subtitle {
-          @include font($size: 17px, $weight: 300);
-        }
-      }
+    i {
+      @include absolute-position($right: 20px, $bottom: 25px);
+    }
+  }
+  &__content {
+    box-sizing: border-box;
+  }
+  &__txt {
+    padding: 16px 13px 12px 13px;
+    @include flexbox($direction: column, $gap: 5px);
+
+    h3 {
+      @include font($size: 18px, $weight: 700);
+    }
+    p {
+      @include font($size: 17px, $weight: 300);
+    }
   }
 }

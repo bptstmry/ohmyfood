@@ -244,7 +244,7 @@ footer ul .fa-solid {
   }
 }
 
-.offers {
+.restaurants {
   width: 100%;
   padding: 54px 0 66px 0;
   box-sizing: border-box;
@@ -254,10 +254,15 @@ footer ul .fa-solid {
   line-height: normal;
   background-color: #F6F6F6;
 }
-.offers .grid {
+.restaurants__grid {
   margin: 0 17px;
 }
-.offers__title {
+.restaurants__offers {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants__title {
   margin: 0 0 24px 20px;
   font-family: "Roboto";
   font-size: 24px;
@@ -265,23 +270,18 @@ footer ul .fa-solid {
   font-style: normal;
   line-height: normal;
 }
-.offers__card {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
 @media only screen and (min-width: 740px) {
-  .offers .div1 {
+  .restaurants--max {
     max-width: 1400px;
     margin: 0 auto;
   }
-  .offers__card {
+  .restaurants__grid {
+    margin: 0 18px;
+  }
+  .restaurants__offers {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-  }
-  .offers .grid {
-    margin: 0 18px;
   }
 }
 
@@ -316,13 +316,13 @@ footer ul .fa-solid {
 .operating__steps {
   counter-reset: ordre;
 }
-.operating__steps__button {
+.operating__button {
   margin: 0 28px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.operating__steps__button .input {
+.operating__input {
   width: 100%;
   height: 72px;
   border: none;
@@ -337,16 +337,16 @@ footer ul .fa-solid {
   justify-content: flex-start;
   align-items: center;
 }
-.operating__steps__button .input .fa-solid {
+.operating__input .fa-solid {
   margin-right: 27px;
   font-size: 19px;
   padding-bottom: 7px;
   color: #7E7E7E;
 }
-.operating__steps__button .input .fa-solid.fa-store {
+.operating__input .fa-solid.fa-store {
   color: #9356DC;
 }
-.operating__steps__button__tag {
+.operating__tag {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -365,21 +365,29 @@ footer ul .fa-solid {
   font-style: normal;
   line-height: normal;
 }
-.operating__steps__button__tag::before {
+.operating__tag::before {
   content: counter(ordre);
 }
 @media only screen and (min-width: 740px) {
-  .operating__steps .input {
+  .operating__input {
     display: flex;
     flex-direction: row;
   }
-  .operating__steps__button {
+  .operating__button {
     width: 100%;
     margin: 0;
   }
 }
 
-.card {
+.restaurants__img {
+  height: 174px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  box-sizing: content-box;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants__card {
   width: 100%;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -388,39 +396,31 @@ footer ul .fa-solid {
   position: relative;
   transition: box-shadow 500ms;
 }
-.card:hover {
+.restaurants__card:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
 }
-.card img {
-  height: 174px;
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-  box-sizing: content-box;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.card i {
+.restaurants__card i {
   position: absolute;
   right: 20px;
   bottom: 25px;
 }
-.card .content {
+.restaurants__content {
   box-sizing: border-box;
 }
-.card .content__txt {
+.restaurants__txt {
   padding: 16px 13px 12px 13px;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.card .content__txt .card__title {
+.restaurants__txt h3 {
   font-family: "Roboto";
   font-size: 18px;
   font-weight: 700;
   font-style: normal;
   line-height: normal;
 }
-.card .content__txt .card__subtitle {
+.restaurants__txt p {
   font-family: "Roboto";
   font-size: 17px;
   font-weight: 300;
@@ -428,7 +428,7 @@ footer ul .fa-solid {
   line-height: normal;
 }
 
-.card .badge {
+.restaurants__card .restaurants--badge {
   width: 80px;
   height: 29px;
   border-radius: 2px;
@@ -449,18 +449,18 @@ footer ul .fa-solid {
   line-height: normal;
 }
 
-.card .fa-heart {
+.restaurants__card .fa-heart {
   font-size: 23px;
   cursor: pointer;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
-.card input[type=checkbox] {
+.restaurants__card input[type=checkbox] {
   display: none;
 }
-.card input[type=checkbox]:checked + label .fa-regular {
+.restaurants__card input[type=checkbox]:checked + label .fa-regular {
   display: none;
 }
-.card label .fa-solid {
+.restaurants__card label .fa-solid {
   display: inherit;
   background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   -webkit-background-clip: text;
