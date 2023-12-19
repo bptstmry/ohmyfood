@@ -1,6 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
 
 // position //
 
@@ -20,6 +17,7 @@
     bottom: $bottom;
     left: $left;
 }
+
 // flexbox //
 
   @mixin flexbox($display: flex, $direction: row, $justify: null, $align: null, $wrap: null, $gap: null) {
@@ -30,7 +28,7 @@
     flex-wrap: $wrap;
     gap: $gap;
   }
-  
+
 // font //
 
 @mixin font($family: 'Roboto', $size: null, $weight: normal, $style: normal, $line-height: normal) {
@@ -41,55 +39,15 @@
     line-height: $line-height;
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// mixin flexbox center with argument = gap
-@mixin center($gap) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: $gap;
-}
-
 // search within style
+
 @mixin nostyle_inputsearch {
     border: none;
-    font-weight: $font-weight-medium;
-    font-size: $body-font-size;
+    font-weight: 500;
+    font-size: 16px;
     width: 130px;
     background-color: transparent;
     color: #353535;
     padding: 0px;
     font-family: roboto;
-
-}
-
-// for test
-@mixin testborder {
-    border: solid 1px;
-}
-
-// liner-gradient background btn
-@mixin btn-background {
-    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 }
