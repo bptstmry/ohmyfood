@@ -54,7 +54,6 @@ a {
 }
 
 header {
-  height: 113px;
   width: 100%;
 }
 header .frame {
@@ -69,6 +68,17 @@ header .frame__logo {
   width: 165px;
   height: 36px;
   padding: 14px 16px 13px;
+  margin: auto;
+}
+header .frame .fa-arrow-left {
+  position: absolute;
+  padding: 23.5px 0 0 17px;
+}
+header .frame__img img {
+  height: 275px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .location {
   width: 100%;
@@ -285,14 +295,12 @@ footer ul .fa-solid {
   }
 }
 
-.hero__btn input {
-  width: 218px;
+.btn {
   height: 50px;
   border: none;
   border-radius: 25px;
   color: #FFFFFF;
   padding: 0;
-  margin: 27px 0 57px 0;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
@@ -303,14 +311,22 @@ footer ul .fa-solid {
   line-height: normal;
   transition: opacity 500ms, box-shadow 500ms;
 }
-.hero__btn input:hover {
+.btn:hover {
   opacity: 0.85;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
 }
 @media only screen and (min-width: 740px) {
-  .hero__btn input {
+  .btn input {
     margin: inherit;
   }
+}
+
+.hero__btn {
+  width: 218px;
+}
+
+.menu__btn {
+  width: 186px;
 }
 
 .operating__steps {
@@ -449,18 +465,18 @@ footer ul .fa-solid {
   line-height: normal;
 }
 
-.restaurants__card .fa-heart {
+.heart .fa-heart {
   font-size: 23px;
   cursor: pointer;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
-.restaurants__card input[type=checkbox] {
+.heart input[type=checkbox] {
   display: none;
 }
-.restaurants__card input[type=checkbox]:checked + label .fa-regular {
+.heart input[type=checkbox]:checked + label .fa-regular {
   display: none;
 }
-.restaurants__card label .fa-solid {
+.heart label .fa-solid {
   display: inherit;
   background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   -webkit-background-clip: text;
@@ -575,115 +591,73 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
     opacity: 0;
   }
 }
-header {
-  height: inherit;
-}
-header .frame {
-  align-items: center;
-}
-header .frame .fa-arrow-left {
-  padding-left: 17px;
-}
-header .frame img {
-  margin: auto;
-}
-header .frame__img img {
-  height: 275px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-main .div2 {
+main .menu {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
-main .background {
+.menu__background {
   margin-top: -55px;
-  background-color: #F6F6F6;
   border-radius: 40px 40px 0px 0px;
-  position: relative;
   width: 100%;
   padding-top: 32px;
+  background-color: #F6F6F6;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 1400px;
 }
-main .background .title {
+.menu__restaurant {
+  padding-bottom: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 24px;
-  padding-bottom: 40px;
 }
-main .background .title .title__section h1 {
+.menu__restaurant i {
+  position: absolute;
+  top: 41px;
+}
+.menu__title h1 {
   color: #101010;
-  font-family: Shrikhand;
+  font-family: "Shrikhand";
   font-size: 28px;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   line-height: normal;
 }
-main .background .title .fa-heart {
-  font-size: 23px;
-  cursor: pointer;
-}
-main .background .title input[type=checkbox] {
-  display: none;
-}
-main .background .title input[type=checkbox]:checked + label .fa-regular {
-  display: none;
-}
-main .background .title label .fa-solid {
-  display: none;
-  background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
 
-input[type=checkbox]:checked + label .fa-solid {
-  display: inherit;
-}
-
-input[type=checkbox]:not(checked) + label .fa-solid {
-  display: inherit;
-}
-
-.background .listcards {
+.menu__listing {
   width: 90%;
-  gap: 40px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
+  gap: 40px;
 }
-.background .listcards .btn {
+.menu__cta {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
-.background .listcards .btn input {
-  margin: inherit;
-  width: 186px;
-  height: 50px;
-}
-.background .listcards .menusection {
+.menu__offers {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.background .listcards .menusection .menusection__title h3 {
+.menu__courses h3 {
   text-transform: uppercase;
-  color: #000;
-  font-family: Roboto;
+  color: #000000;
+  font-family: "Roboto";
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   line-height: normal;
   padding-bottom: 12px;
   position: relative;
 }
-.background .listcards .menusection .menusection__title h3::after {
+.menu__courses h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -692,101 +666,108 @@ input[type=checkbox]:not(checked) + label .fa-solid {
   height: 3px;
   background-color: #99E2D0;
 }
-.background .listcards .menusection__card {
+.menu__card {
+  padding: 15px 0 15px 15px;
+  border-radius: 15.043px;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  background-color: white;
-  border-radius: 15.043px;
-  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   position: relative;
-  overflow: hidden;
 }
-.background .listcards .menusection__card .content h3 {
-  font-family: Roboto;
+.menu__content h3 {
+  font-family: "Roboto";
   font-size: 18px;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: normal;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   transition: width 550ms ease;
 }
-.background .listcards .menusection__card .content p {
-  font-family: Roboto;
-  font-size: 15.043px;
-  font-style: normal;
+.menu__content p {
+  font-family: "Roboto";
+  font-size: 15px;
   font-weight: 300;
+  font-style: normal;
   line-height: normal;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   transition: width 550ms ease;
 }
-.background .listcards .menusection__card .price {
-  font-family: Roboto;
-  font-size: 15.043px;
-  font-style: normal;
+.menu__price {
+  height: 100%;
+  background-color: #FFFFFF;
+  padding-right: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-family: "Roboto";
+  font-size: 15px;
   font-weight: 700;
+  font-style: normal;
   line-height: normal;
   transition: transform 550ms ease-in-out;
-  overflow: hidden;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  background-color: white;
-  padding-right: 15px;
 }
 
-.menusection__card:hover .price {
+.menu__card:hover .menu__price {
   transform: translateX(-59px);
 }
-.menusection__card:hover .lb {
+.menu__card:hover .menu__strip {
   transform: translateX(0);
 }
-.menusection__card:hover .content {
+.menu__card:hover .menu__content {
   width: 70%;
 }
 
-.lb-checkbox {
+.menu__checkbox {
   display: none;
 }
 
-.lb {
+.menu__strip {
   height: 75px;
   width: 59px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 550ms ease-in-out;
+  transform: translateX(59px);
+  color: #FFFFFF;
   background-color: #99E2D0;
   position: absolute;
-  cursor: pointer;
-  color: white;
-  right: 0px;
+  right: 0;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  transition: transform 550ms ease-in-out;
-  transform: translateX(59px);
-  overflow: hidden;
 }
-.lb-checkbox:checked ~ .lb {
+
+.menu__checkbox:checked ~ .menu__strip {
   transform: translateX(0px);
 }
 
-.lb-checkbox:checked ~ .price {
+.menu__checkbox:checked ~ .menu__price {
   transform: translateX(-59px);
 }
 
-.lb-checkbox:checked ~ .content {
+.menu__checkbox:checked ~ .content {
   width: 70%;
 }
 
-.menusection {
+.menu__title {
   opacity: 0;
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+.menu__offers {
+  opacity: 0;
+  animation: fade-in 300ms ease-in-out forwards;
 }
 
 @keyframes fade-in {
@@ -797,26 +778,14 @@ input[type=checkbox]:not(checked) + label .fa-solid {
     opacity: 1;
   }
 }
-.menusection {
-  animation: fade-in 300ms ease-in-out forwards;
-}
-
-.menusection:nth-child(1) {
+.menu__offers:nth-child(1) {
   animation-delay: 300ms;
 }
 
-.menusection:nth-child(2) {
+.menu__offers:nth-child(2) {
   animation-delay: 600ms;
 }
 
-.menusection:nth-child(3) {
+.menu__offers:nth-child(3) {
   animation-delay: 900ms;
-}
-
-.title {
-  opacity: 0;
-}
-
-.title {
-  animation: fade-in 300ms ease-in-out forwards;
 }/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,4 @@
 header {
-  height: 113px;
   width: 100%;
 
   .frame {
@@ -12,8 +11,22 @@ header {
       width: 165px;
       height: 36px;
       padding: 14px 16px 13px;
+      margin: auto;
+    }
+    // arrow and img on restaurants pages //
+    .fa-arrow-left {
+      position: absolute;
+      padding: 23.5px 0 0 17px;
+    }
+    &__img {
+      img {
+        height: 275px;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
+  // --- //
 
   .location {
     width: 100%;
