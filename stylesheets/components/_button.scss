@@ -3,7 +3,8 @@
 // -----------------------------------------------------------------------------
 
 // btn homepage cta
-.btn {
+.hero {
+  &__btn {
     input {
       width: 218px;
       height: 50px;
@@ -15,83 +16,82 @@
       box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
       cursor: pointer;
       background: $gradient-purple-to-pink;
-      font-size: $body-font-size;
-      font-weight: $font-weight-medium;
+      @include font($size: 16px, $weight: 500);
       transition: opacity 500ms, box-shadow 500ms;
-  
+
       &:hover {
         opacity: 0.85;
         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
       }
     }
-  
+
     @media only screen and (min-width: $break) {
       input {
         margin: inherit;
       }
     }
   }
-  
+}
+
 //btn menu
-.menu__bar {
-    counter-reset: ordre;
-  
-    &__button {
-      margin: 0 28px;
-      @include flexbox($align:center);
-      
-  
-      .input {
-        width: 100%;
-        height: 72px;
-        border: none;
-        border-radius: 20px;
-        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-        padding-left: 27px;
-        background-color: $extra-light-gray;
-        font-size: $body-font-size;
-        font-weight: $font-weight-medium;
-        @include flexbox($justify:flex-start, $align: center);
-  
-        .fa-solid {
-          margin-right: 27px;
-          font-size: 19px;
-          padding-bottom: 7px;
-          color: $gray;
-  
-          &.fa-store {
-            color: $primary-color;
-          }
-        }
-      }
-  
-      &__round {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        margin-right: -10px;
-        counter-increment: ordre;
-        background-color: $primary-color;
-        @include relative-position;
-        @include flexbox($justify: center, $align: center);
-        color: $white;
-        @include font($size: 14px);
-  
-        &::before {
-          content: counter(ordre);
+.operating__steps {
+  counter-reset: ordre;
+
+  &__button {
+    margin: 0 28px;
+    @include flexbox($align: center);
+
+    .input {
+      width: 100%;
+      height: 72px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      padding-left: 27px;
+      background-color: $extra-light-gray;
+      font-size: $body-font-size;
+      font-weight: $font-weight-medium;
+      @include flexbox($justify: flex-start, $align: center);
+
+      .fa-solid {
+        margin-right: 27px;
+        font-size: 19px;
+        padding-bottom: 7px;
+        color: $gray;
+        
+        // active icon //
+        &.fa-store {
+          color: $primary-color;
         }
       }
     }
-  
-    @media only screen and (min-width: $break) {
-      .input {
-        @include flexbox;
-      }
-  
-      &__button {
-        width: 100%;
-        margin: 0;
+
+    &__tag {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin-right: -10px;
+      counter-increment: ordre;
+      background-color: $primary-color;
+      @include relative-position;
+      @include flexbox($justify: center, $align: center);
+      color: $white;
+      @include font($size: 14px);
+
+      &::before {
+        content: counter(ordre);
       }
     }
   }
-  
+
+  @media only screen and (min-width: $break) {
+    .input {
+      @include flexbox;
+    }
+
+    &__button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

@@ -141,7 +141,7 @@ footer ul .fa-solid {
   }
 }
 
-.headline {
+.hero {
   width: 100%;
   padding-top: 39px;
   font-family: "Roboto";
@@ -154,7 +154,7 @@ footer ul .fa-solid {
   align-items: center;
   background-color: #F6F6F6;
 }
-.headline h1 {
+.hero h1 {
   height: 68px;
   width: 275px;
   text-align: center;
@@ -164,7 +164,7 @@ footer ul .fa-solid {
   font-style: normal;
   line-height: normal;
 }
-.headline h2 {
+.hero h2 {
   height: 46px;
   width: 315px;
   text-align: center;
@@ -176,12 +176,12 @@ footer ul .fa-solid {
   color: #353535;
 }
 @media only screen and (min-width: 740px) {
-  .headline {
+  .hero {
     padding-top: 30px;
     padding-bottom: 30px;
     gap: 18px;
   }
-  .headline h1 {
+  .hero h1 {
     width: 100%;
     height: inherit;
     font-family: "Roboto";
@@ -190,7 +190,7 @@ footer ul .fa-solid {
     font-style: normal;
     line-height: normal;
   }
-  .headline h2 {
+  .hero h2 {
     width: 100%;
     height: inherit;
     font-family: "Roboto";
@@ -201,14 +201,14 @@ footer ul .fa-solid {
   }
 }
 
-.menu {
+.operating {
   box-sizing: border-box;
   font-family: "Roboto";
   font-weight: normal;
   font-style: normal;
   line-height: normal;
 }
-.menu h1 {
+.operating h1 {
   height: 31px;
   margin: 48px 80px 26px 20px;
   font-family: "Roboto";
@@ -217,27 +217,27 @@ footer ul .fa-solid {
   font-style: normal;
   line-height: normal;
 }
-.menu__bar {
+.operating__steps {
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding-bottom: 68px;
 }
 @media only screen and (min-width: 740px) {
-  .menu {
+  .operating {
     margin: 0 18px;
   }
-  .menu .div {
+  .operating--max {
     max-width: 1400px;
     margin: 0 auto;
   }
-  .menu__bar {
+  .operating__steps {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  .menu h1 {
+  .operating h1 {
     display: flex;
     flex-direction: row;
     margin: 0 0;
@@ -285,7 +285,7 @@ footer ul .fa-solid {
   }
 }
 
-.btn input {
+.hero__btn input {
   width: 218px;
   height: 50px;
   border: none;
@@ -296,30 +296,33 @@ footer ul .fa-solid {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  font-family: "Roboto";
   font-size: 16px;
   font-weight: 500;
+  font-style: normal;
+  line-height: normal;
   transition: opacity 500ms, box-shadow 500ms;
 }
-.btn input:hover {
+.hero__btn input:hover {
   opacity: 0.85;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
 }
 @media only screen and (min-width: 740px) {
-  .btn input {
+  .hero__btn input {
     margin: inherit;
   }
 }
 
-.menu__bar {
+.operating__steps {
   counter-reset: ordre;
 }
-.menu__bar__button {
+.operating__steps__button {
   margin: 0 28px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.menu__bar__button .input {
+.operating__steps__button .input {
   width: 100%;
   height: 72px;
   border: none;
@@ -334,16 +337,16 @@ footer ul .fa-solid {
   justify-content: flex-start;
   align-items: center;
 }
-.menu__bar__button .input .fa-solid {
+.operating__steps__button .input .fa-solid {
   margin-right: 27px;
   font-size: 19px;
   padding-bottom: 7px;
   color: #7E7E7E;
 }
-.menu__bar__button .input .fa-solid.fa-store {
+.operating__steps__button .input .fa-solid.fa-store {
   color: #9356DC;
 }
-.menu__bar__button__round {
+.operating__steps__button__tag {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -362,15 +365,15 @@ footer ul .fa-solid {
   font-style: normal;
   line-height: normal;
 }
-.menu__bar__button__round::before {
+.operating__steps__button__tag::before {
   content: counter(ordre);
 }
 @media only screen and (min-width: 740px) {
-  .menu__bar .input {
+  .operating__steps .input {
     display: flex;
     flex-direction: row;
   }
-  .menu__bar__button {
+  .operating__steps__button {
     width: 100%;
     margin: 0;
   }

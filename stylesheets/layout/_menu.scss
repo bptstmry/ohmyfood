@@ -1,4 +1,4 @@
-.menu {
+.operating {
     box-sizing: border-box;
     @include font;
 
@@ -8,7 +8,7 @@
         @include font($size: 24px, $weight: 700);
     }
 
-    &__bar {
+    &__steps {
         @include flexbox($direction: column, $gap: 25px);
         padding-bottom: 68px;
     }
@@ -16,12 +16,12 @@
     @media only screen and (min-width: $break) {
         margin: 0 18px;
 
-        .div {
+        &--max {
             max-width: $maxwidth;
             margin: 0 auto;
         }
 
-        &__bar {
+        &__steps {
             @include flexbox($justify: center, $align: center);
         }
 
