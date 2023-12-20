@@ -178,7 +178,7 @@ footer ul .fa-solid {
   opacity: 0.85;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 768px) {
   .btn input {
     margin: inherit;
   }
@@ -188,7 +188,7 @@ footer ul .fa-solid {
   width: 218px;
   margin: 27px 0 57px 0;
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 768px) {
   .hero__btn {
     margin: 0;
   }
@@ -253,7 +253,7 @@ footer ul .fa-solid {
 .operating__tag::before {
   content: counter(ordre);
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 768px) {
   .operating__input {
     display: flex;
     flex-direction: row;
@@ -336,37 +336,30 @@ footer ul .fa-solid {
 .heart .fa-heart {
   font-size: 23px;
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .heart input[type=checkbox] {
   display: none;
 }
-.heart input[type=checkbox]:checked + label .fa-regular {
-  display: none;
-}
 .heart label .fa-solid {
-  display: inherit;
   background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   -webkit-background-clip: text;
   color: transparent;
 }
 
+input[type=checkbox]:not(:checked) + label .fa-solid {
+  display: none;
+}
+
+input[type=checkbox]:checked + label .fa-regular {
+  display: none;
+}
+
 input[type=checkbox]:checked + label .fa-solid {
-  display: inherit;
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-input[type=checkbox]:not(:checked) + label .fa-solid {
-  display: inherit;
-}
-
 input[type=checkbox]:not(:checked) + label .fa-regular {
-  display: inherit;
-  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-input[type=checkbox]:not(:checked) + label .fa-solid {
-  display: none;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 @keyframes scale-in-center {
@@ -530,16 +523,6 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
   transition: transform 550ms ease-in-out;
 }
 
-.menu__card:hover .menu__price {
-  transform: translateX(-59px);
-}
-.menu__card:hover .menu__strip {
-  transform: translateX(0);
-}
-.menu__card:hover .menu__content {
-  width: 70%;
-}
-
 .menu__checkbox {
   display: none;
 }
@@ -562,16 +545,26 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
   font-size: 22px;
 }
 
-.menu__checkbox:checked ~ .menu__strip {
-  transform: translateX(0px);
+.menu__card:hover .menu__price {
+  transform: translateX(-59px);
+}
+.menu__card:hover .menu__strip {
+  transform: translateX(0);
+}
+.menu__card:hover .menu__content {
+  width: 70%;
 }
 
 .menu__checkbox:checked ~ .menu__price {
   transform: translateX(-59px);
 }
 
-.menu__checkbox:checked ~ .content {
-  width: 100%;
+.menu__checkbox:checked ~ .menu__strip {
+  transform: translateX(0px);
+}
+
+.menu__checkbox:checked ~ .menu__content {
+  width: 70%;
 }
 
 .hero {
@@ -608,7 +601,7 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
   line-height: normal;
   color: #353535;
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 768px) {
   .hero {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -656,7 +649,7 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
   flex-direction: column;
   gap: 25px;
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 768px) {
   .operating {
     padding: 50px 18px;
   }
@@ -704,7 +697,7 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
   font-style: normal;
   line-height: normal;
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 768px) {
   .restaurants {
     padding: 30px 0;
   }

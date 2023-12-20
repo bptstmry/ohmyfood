@@ -4,6 +4,7 @@
   @include absolute-position($z-index: 1);
   background-color: $white;
   @include flexbox($justify: center, $align: center);
+  // gradual disappearance of the loader //
   animation: none-loader 2350ms forwards;
 
   .letter {
@@ -13,6 +14,7 @@
     margin-right: -22px;
     @include font($family: 'Shrikhand', $size: 50px);
     @include relative-position;
+    // letters animations //
     animation: flash 1s linear forwards;
 
     &:nth-child(1) {
@@ -42,6 +44,7 @@
   }
 }
 
+// keyframes = letters animations //
 @keyframes flash {
   0% {
     background-image: $gradient-pink-to-purple;
@@ -55,7 +58,7 @@
     text-shadow: none;
   }
 }
-
+//  keyframes = none-loader animations //
 @keyframes none-loader {
   85% {
     opacity: 1;

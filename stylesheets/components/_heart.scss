@@ -1,62 +1,58 @@
 .heart {
-        .fa-heart {
-            font-size: 23px;
-            cursor: pointer;
-            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-        }
-
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        input[type="checkbox"]:checked + label .fa-regular {
-            display: none;
-        }
-
-        label .fa-solid {
-            display: inherit;
-            background-image: $gradient-pink-to-purple;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-}
-
-input[type="checkbox"]:checked + label .fa-solid {
-    display: inherit;
-    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-}
-
-input[type="checkbox"]:not(:checked) + label .fa-solid {
-    display: inherit;
-}
-
-
-input[type="checkbox"]:not(:checked) + label .fa-regular {
-    display: inherit;
-    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-input[type="checkbox"]:not(:checked) + label .fa-solid {
+  // heart icons //
+  .fa-heart {
+    font-size: 23px;
+    cursor: pointer;
+    }
+  // default checkbox= masked //
+  input[type="checkbox"] {
     display: none;
+  }
+  // full heart style //
+  label .fa-solid {
+    background-image: $gradient-pink-to-purple;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+// initial : full heart= masked; empty heart= active//
+input[type="checkbox"]:not(:checked) + label .fa-solid {
+  display: none;
 }
 
-@keyframes scale-in-center {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+// active : empty heart= masked //
+input[type="checkbox"]:checked + label .fa-regular {
+  display: none;
 }
-@keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+
+// full heart= active with scale-in-center animation //
+input[type="checkbox"]:checked + label .fa-solid {
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+// return to the initial situation + empty heart fade-in animation //
+input[type="checkbox"]:not(:checked) + label .fa-regular {
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+// keyframes full heart scale-in-center animation //
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
   }
-  
-  
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// keyframes empty heart fade-in animation //
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

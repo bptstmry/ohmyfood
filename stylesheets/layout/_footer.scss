@@ -20,7 +20,7 @@ footer {
         }
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: $break) {
         height: inherit;
         padding: 30px 25px;
         @include font($weight: 400, $size: 16px);

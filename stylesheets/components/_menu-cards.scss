@@ -16,18 +16,22 @@
       }
     }
   }
-  // card //
+  // -- card -- //
+  // card base style //
   &__card {
     padding: 15px 0 15px 15px;
     border-radius: 15.043px;
     box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+    // masked overflow //
     overflow: hidden;
     background-color: $white;
+    // flexbox arrangement //
     @include flexbox($justify: space-between, $align: center);
     @include relative-position;
   }
   &__content {
     h3 {
+      // masked overflow; active= "..." //
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
@@ -36,6 +40,7 @@
       transition: width 550ms ease;
     }
     p {
+      // masked overflow; active= "..." //
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
@@ -54,32 +59,21 @@
   }
 }
 
-// interaction with checkbox //
+// -- interaction with checkbox -- //
 
-.menu__card {
-  &:hover {
-    .menu__price {
-      transform: translateX(-59px);
-    }
-    .menu__strip {
-      transform: translateX(0);
-    }
-    .menu__content {
-      width: 70%;
-    }
-  }
-}
-
+// masked checkbox base //
 .menu__checkbox {
   display: none;
 }
 
+// strip base style //
 .menu__strip {
   height: 75px;
   width: 59px;
   cursor: pointer;
   overflow: hidden;
   transition: transform 550ms ease-in-out;
+  // out of card //
   transform: translateX(59px);
   color: $white;
   background-color: $tertiary-color;
@@ -88,13 +82,31 @@
   font-size: 22px;
 }
 
-.menu__checkbox:checked ~ .menu__strip {
-  transform: translateX(0px);
+// hover //
+.menu__card {
+  &:hover {
+    .menu__price {
+      transform: translateX(-59px);
+    }
+    .menu__strip {
+      // initial position -> flexbox menu__card //
+      transform: translateX(0);
+    }
+    .menu__content {
+      width: 70%;
+    }
+  }
 }
+
+
+// checkbox interactions; same values like hover section //
 
 .menu__checkbox:checked ~ .menu__price {
   transform: translateX(-59px);
 }
-.menu__checkbox:checked ~ .content {
-  width: 100%;
+.menu__checkbox:checked ~ .menu__strip {
+  transform: translateX(0px);
+}
+.menu__checkbox:checked ~ .menu__content {
+  width: 70%;
 }
