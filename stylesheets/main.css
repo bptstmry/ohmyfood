@@ -459,6 +459,121 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
     opacity: 0;
   }
 }
+.menu__courses h3 {
+  text-transform: uppercase;
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: normal;
+  padding-bottom: 12px;
+  position: relative;
+}
+.menu__courses h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+.menu__card {
+  padding: 15px 0 15px 15px;
+  border-radius: 15.043px;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.menu__content h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 5px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  transition: width 550ms ease;
+}
+.menu__content p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: normal;
+  transition: width 550ms ease;
+}
+.menu__price {
+  height: 100%;
+  background-color: #FFFFFF;
+  padding-right: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  transition: transform 550ms ease-in-out;
+}
+
+.menu__card:hover .menu__price {
+  transform: translateX(-59px);
+}
+.menu__card:hover .menu__strip {
+  transform: translateX(0);
+}
+.menu__card:hover .menu__content {
+  width: 70%;
+}
+
+.menu__checkbox {
+  display: none;
+}
+
+.menu__strip {
+  height: 75px;
+  width: 59px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 550ms ease-in-out;
+  transform: translateX(59px);
+  color: #FFFFFF;
+  background-color: #99E2D0;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.menu__checkbox:checked ~ .menu__strip {
+  transform: translateX(0px);
+}
+
+.menu__checkbox:checked ~ .menu__price {
+  transform: translateX(-59px);
+}
+
+.menu__checkbox:checked ~ .content {
+  width: 100%;
+}
+
 .hero {
   width: 100%;
   padding-top: 39px;
@@ -661,129 +776,15 @@ main .menu {
   flex-direction: column;
   gap: 40px;
 }
-.menu__cta {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 .menu__offers {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.menu__courses h3 {
-  text-transform: uppercase;
-  color: #000000;
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 300;
-  font-style: normal;
-  line-height: normal;
-  padding-bottom: 12px;
-  position: relative;
-}
-.menu__courses h3::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 3px;
-  background-color: #99E2D0;
-}
-.menu__card {
-  padding: 15px 0 15px 15px;
-  border-radius: 15.043px;
-  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  background-color: #FFFFFF;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.menu__content h3 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-bottom: 5px;
-  font-family: "Roboto";
-  font-size: 18px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: normal;
-  transition: width 550ms ease;
-}
-.menu__content p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: "Roboto";
-  font-size: 15px;
-  font-weight: 300;
-  font-style: normal;
-  line-height: normal;
-  transition: width 550ms ease;
-}
-.menu__price {
-  height: 100%;
-  background-color: #FFFFFF;
-  padding-right: 15px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  font-family: "Roboto";
-  font-size: 15px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: normal;
-  transition: transform 550ms ease-in-out;
-}
-
-.menu__card:hover .menu__price {
-  transform: translateX(-59px);
-}
-.menu__card:hover .menu__strip {
-  transform: translateX(0);
-}
-.menu__card:hover .menu__content {
-  width: 70%;
-}
-
-.menu__checkbox {
-  display: none;
-}
-
-.menu__strip {
-  height: 75px;
-  width: 59px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 550ms ease-in-out;
-  transform: translateX(59px);
-  color: #FFFFFF;
-  background-color: #99E2D0;
-  position: absolute;
-  right: 0;
+.menu__cta {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  font-size: 22px;
-}
-
-.menu__checkbox:checked ~ .menu__strip {
-  transform: translateX(0px);
-}
-
-.menu__checkbox:checked ~ .menu__price {
-  transform: translateX(-59px);
-}
-
-.menu__checkbox:checked ~ .content {
-  width: 100%;
 }
 
 .menu__title {

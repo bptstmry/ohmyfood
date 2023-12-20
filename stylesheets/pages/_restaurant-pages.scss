@@ -1,4 +1,4 @@
-// center main section //
+// -- center main section -- //
 
 main {
   .menu {
@@ -6,7 +6,7 @@ main {
   }
 }
 
-// restaurant title //
+// -- restaurant title --//
 
 .menu {
   &__background {
@@ -41,7 +41,7 @@ main {
   }
 }
 
-// cards //
+// -- cards -- //
 
 .menu {
   &__listing {
@@ -49,113 +49,14 @@ main {
     padding-bottom: 40px;
     @include flexbox($direction: column, $gap: 40px);
   }
-  &__cta {
-    @include flexbox($justify: center);
-  }
   &__offers {
     @include flexbox($direction: column, $gap: 12px);
   }
-  // courses listing //
-  &__courses {
-    h3 {
-      text-transform: uppercase;
-      color: $black;
-      @include font($size: 16px, $weight: 300);
-      padding-bottom: 12px;
-      @include relative-position;
-
-      &::after {
-        content: "";
-        @include absolute-position($bottom: 0, $left: 0);
-        width: 40px;
-        height: 3px;
-        background-color: $tertiary-color;
-      }
-    }
-  }
-  // card //
-  &__card {
-    padding: 15px 0 15px 15px;
-    border-radius: 15.043px;
-    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: $white;
-    @include flexbox($justify: space-between, $align: center);
-    @include relative-position;
-  }
-  &__content {
-    h3 {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      margin-bottom: 5px;
-      @include font($size: 18px, $weight: 500);
-      transition: width 550ms ease;
-    }
-    p {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      @include font($size: 15px, $weight: 300);
-      transition: width 550ms ease;
-    }
-  }
-  &__price {
-    height: 100%;
-    background-color: $white;
-    padding-right: 15px;
-    overflow: hidden;
-    @include flexbox($align: flex-end);
-    @include font($size: 15px, $weight: 700);
-    transition: transform 550ms ease-in-out;
+  &__cta {
+    @include flexbox($justify: center);
   }
 }
-
-// interaction with checkbox //
-
-.menu__card {
-  &:hover {
-    .menu__price {
-      transform: translateX(-59px);
-    }
-    .menu__strip {
-      transform: translateX(0);
-    }
-    .menu__content {
-      width: 70%;
-    }
-  }
-}
-
-.menu__checkbox {
-  display: none;
-}
-
-.menu__strip {
-  height: 75px;
-  width: 59px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 550ms ease-in-out;
-  transform: translateX(59px);
-  color: $white;
-  background-color: $tertiary-color;
-  @include absolute-position($right: 0);
-  @include flexbox($justify: center, $align: center);
-  font-size: 22px;
-}
-
-.menu__checkbox:checked ~ .menu__strip {
-  transform: translateX(0px);
-}
-
-.menu__checkbox:checked ~ .menu__price {
-  transform: translateX(-59px);
-}
-.menu__checkbox:checked ~ .content {
-  width: 100%;
-}
-
+  
 // progressive animation //
 
 .menu__title {
