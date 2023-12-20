@@ -104,7 +104,7 @@ header .location__form input {
 
 footer {
   height: 186px;
-  padding: 22px;
+  padding: 22px 25px;
   background-color: #353535;
   color: #FFFFFF;
   font-family: "Roboto";
@@ -131,6 +131,11 @@ footer ul .fa-solid {
   footer {
     height: inherit;
     padding: 30px 25px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
@@ -138,6 +143,8 @@ footer ul .fa-solid {
   }
   footer .logo {
     margin-bottom: inherit;
+    width: 111px;
+    padding-right: 28px;
   }
   footer ul {
     display: flex;
@@ -148,150 +155,6 @@ footer ul .fa-solid {
   }
   footer ul li:nth-child(3), footer ul li:nth-child(4) {
     width: 130px;
-  }
-}
-
-.hero {
-  width: 100%;
-  padding-top: 39px;
-  font-family: "Roboto";
-  font-weight: normal;
-  font-style: normal;
-  line-height: normal;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #F6F6F6;
-}
-.hero h1 {
-  height: 68px;
-  width: 275px;
-  text-align: center;
-  font-family: "Roboto";
-  font-size: 24px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: normal;
-}
-.hero h2 {
-  height: 46px;
-  width: 315px;
-  text-align: center;
-  font-family: "Roboto";
-  font-size: 18px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: normal;
-  color: #353535;
-}
-@media only screen and (min-width: 740px) {
-  .hero {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    gap: 18px;
-  }
-  .hero h1 {
-    width: 100%;
-    height: inherit;
-    font-family: "Roboto";
-    font-size: 40px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: normal;
-  }
-  .hero h2 {
-    width: 100%;
-    height: inherit;
-    font-family: "Roboto";
-    font-size: 18px;
-    font-weight: 300;
-    font-style: normal;
-    line-height: normal;
-  }
-}
-
-.operating {
-  box-sizing: border-box;
-  font-family: "Roboto";
-  font-weight: normal;
-  font-style: normal;
-  line-height: normal;
-}
-.operating h1 {
-  height: 31px;
-  margin: 48px 80px 26px 20px;
-  font-family: "Roboto";
-  font-size: 24px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: normal;
-}
-.operating__steps {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding-bottom: 68px;
-}
-@media only screen and (min-width: 740px) {
-  .operating {
-    margin: 0 18px;
-  }
-  .operating--max {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  .operating__steps {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .operating h1 {
-    display: flex;
-    flex-direction: row;
-    margin: 0 0;
-  }
-}
-
-.restaurants {
-  width: 100%;
-  padding: 54px 0 66px 0;
-  box-sizing: border-box;
-  font-family: "Roboto";
-  font-weight: normal;
-  font-style: normal;
-  line-height: normal;
-  background-color: #F6F6F6;
-}
-.restaurants__grid {
-  margin: 0 17px;
-}
-.restaurants__offers {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.restaurants__title {
-  margin: 0 0 24px 20px;
-  font-family: "Roboto";
-  font-size: 24px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: normal;
-}
-@media only screen and (min-width: 740px) {
-  .restaurants--max {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  .restaurants__grid {
-    margin: 0 18px;
-  }
-  .restaurants__offers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
   }
 }
 
@@ -323,6 +186,12 @@ footer ul .fa-solid {
 
 .hero__btn {
   width: 218px;
+  margin: 27px 0 57px 0;
+}
+@media only screen and (min-width: 740px) {
+  .hero__btn {
+    margin: 0;
+  }
 }
 
 .menu__btn {
@@ -416,14 +285,14 @@ footer ul .fa-solid {
 }
 .restaurants__card i {
   position: absolute;
-  right: 20px;
-  bottom: 25px;
+  right: 28px;
+  bottom: 23px;
 }
 .restaurants__content {
   box-sizing: border-box;
 }
 .restaurants__txt {
-  padding: 16px 13px 12px 13px;
+  padding: 10px 13px 14px 13px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -451,8 +320,8 @@ footer ul .fa-solid {
   background-color: #99E2D0;
   color: #008766;
   position: absolute;
-  top: 23px;
-  right: 25px;
+  top: 13px;
+  right: 12px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -590,6 +459,159 @@ input[type=checkbox]:not(:checked) + label .fa-solid {
     opacity: 0;
   }
 }
+.hero {
+  width: 100%;
+  padding-top: 39px;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+}
+.hero h1 {
+  height: 68px;
+  width: 275px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
+.hero h2 {
+  height: 46px;
+  width: 315px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: normal;
+  color: #353535;
+}
+@media only screen and (min-width: 740px) {
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 18px;
+  }
+  .hero h1 {
+    width: 100%;
+    height: inherit;
+    font-family: "Roboto";
+    font-size: 40px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+  }
+  .hero h2 {
+    width: 100%;
+    height: inherit;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+  }
+}
+
+.operating {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  padding-bottom: 68px;
+}
+.operating h1 {
+  height: 31px;
+  margin: 48px 80px 26px 20px;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
+.operating__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+@media only screen and (min-width: 740px) {
+  .operating {
+    padding: 50px 18px;
+  }
+  .operating--max {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .operating__steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .operating h1 {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0;
+    padding-bottom: 25px;
+  }
+}
+
+.restaurants {
+  width: 100%;
+  padding: 54px 0 66px 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  background-color: #F6F6F6;
+}
+.restaurants__grid {
+  margin: 0 17px;
+}
+.restaurants__offers {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants__title {
+  margin: 0 0 24px 20px;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
+@media only screen and (min-width: 740px) {
+  .restaurants {
+    padding: 30px 0;
+  }
+  .restaurants--max {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .restaurants__grid {
+    margin: 0 18px;
+  }
+  .restaurants__offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 50px;
+    grid-column-gap: 100px;
+  }
+  .restaurants__title {
+    margin: 0 0 28px 20px;
+  }
+}
+
 main .menu {
   display: flex;
   flex-direction: row;
@@ -606,7 +628,7 @@ main .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1400px;
+  max-width: 1080px;
 }
 .menu__restaurant {
   padding-bottom: 40px;
@@ -626,6 +648,10 @@ main .menu {
   font-weight: 400;
   font-style: normal;
   line-height: normal;
+}
+
+.menu__title .letter-spacing {
+  letter-spacing: 1.6px;
 }
 
 .menu__listing {
@@ -678,25 +704,26 @@ main .menu {
   position: relative;
 }
 .menu__content h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 5px;
   font-family: "Roboto";
   font-size: 18px;
   font-weight: 500;
   font-style: normal;
   line-height: normal;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   transition: width 550ms ease;
 }
 .menu__content p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
   line-height: normal;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   transition: width 550ms ease;
 }
 .menu__price {
@@ -756,7 +783,7 @@ main .menu {
 }
 
 .menu__checkbox:checked ~ .content {
-  width: 70%;
+  width: 100%;
 }
 
 .menu__title {

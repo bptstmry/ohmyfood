@@ -6,7 +6,7 @@
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
         background-color: $tertiary-color;
         color: $green;
-        @include absolute-position(23px, 25px);
+        @include absolute-position(13px, 12px);
         @include flexbox($justify: center, $align: center);
         @include font($size:14px, $weight: 500);
     }

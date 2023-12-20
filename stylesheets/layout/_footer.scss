@@ -1,6 +1,6 @@
 footer {
     height: 186px;
-    padding: 22px;
+    padding: 22px 25px;
     background-color: $charcoal-gray;
     color:$white;
     @include font($weight: 500, $size: 16px);
@@ -23,10 +23,13 @@ footer {
     @media only screen and (min-width: 768px) {
         height: inherit;
         padding: 30px 25px;
+        @include font($weight: 400, $size: 16px);
         @include flexbox($direction: row-reverse, $align: flex-end, $gap: 16px);
     
         .logo {
             margin-bottom: inherit;
+            width: 111px;
+            padding-right: 28px;
         }
     
         ul {

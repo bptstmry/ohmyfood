@@ -1,0 +1,122 @@
+// hero //
+
+.hero {
+  width: 100%;
+  padding-top: 39px;
+  @include font;
+  @include flexbox($direction: column, $justify: center, $align: center);
+  background-color: $extra-light-gray;
+
+  h1 {
+    height: 68px;
+    width: 275px;
+    text-align: center;
+    @include font($size: 24px, $weight: 700);
+  }
+
+  h2 {
+    height: 46px;
+    width: 315px;
+    text-align: center;
+    @include font($size: 18px, $weight: 300);
+    color: $charcoal-gray;
+  }
+
+  @media only screen and (min-width: $break) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 18px;
+
+    h1 {
+      width: 100%;
+      height: inherit;
+      @include font($size: 40px, $weight: 700);
+    }
+
+    h2 {
+      width: 100%;
+      height: inherit;
+      @include font($size: 18px, $weight: 300);
+    }
+  }
+}
+
+// operating //
+
+.operating {
+  box-sizing: border-box;
+  @include font;
+  padding-bottom: 68px;
+
+
+  h1 {
+    height: 31px;
+    margin: 48px 80px 26px 20px;
+    @include font($size: 24px, $weight: 700);
+  }
+
+  &__steps {
+    @include flexbox($direction: column, $gap: 25px);
+  }
+
+  @media only screen and (min-width: $break) {
+    padding: 50px 18px;
+
+    &--max {
+      max-width: $maxwidth;
+      margin: 0 auto;
+    }
+
+    &__steps {
+      @include flexbox($justify: center, $align: center);
+    }
+
+    h1 {
+      @include flexbox;
+      margin: 0 0;
+      padding-bottom: 25px;
+    }
+  }
+}
+
+// restaurants //
+
+.restaurants {
+  width: 100%;
+  padding: 54px 0 66px 0;
+  box-sizing: border-box;
+  @include font;
+  background-color: $extra-light-gray;
+
+  &__grid {
+    margin: 0 17px;
+  }
+  &__offers {
+    @include flexbox($direction: column, $gap: 18px);
+  }
+  &__title {
+    margin: 0 0 24px 20px;
+    @include font($size: 24px, $weight: 700);
+  }
+
+  @media only screen and (min-width: $break) {
+    padding: 30px 0;
+    &--max {
+      max-width: $maxwidth;
+      margin: 0 auto;
+    }
+    &__grid {
+      margin: 0 18px;
+    }
+    &__offers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 50px; 
+      grid-column-gap: 100px; 
+    }
+    &__title {
+      margin: 0 0 28px 20px;
+    }
+  }
+}

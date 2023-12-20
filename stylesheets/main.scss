@@ -4,15 +4,12 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-// 2. Vendors
-@import 'vendors/reset';
+// 2. Parameters
+@import 'parameters/reset';
 
 // 4. Layout-related sections
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/headline';
-@import 'layout/menu';
-@import 'layout/offers';
 
 // 5. Components
 @import 'components/button';

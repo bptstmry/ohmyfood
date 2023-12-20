@@ -1,4 +1,5 @@
 
+// cta //
 .btn {
   height: 50px;
   border: none;
@@ -22,13 +23,17 @@
 // home cta //
 .hero__btn {
   width: 218px;
+  margin: 27px 0 57px 0;
+  @media only screen and (min-width: $break) {
+    margin: 0;
+  }
 }
 // restaurants cta //
 .menu__btn {
   width: 186px;
 }
 
-// btn menu //
+// operating listing //
 .operating {
   &__steps {
     counter-reset: ordre;
@@ -82,7 +87,6 @@
     &__input {
       @include flexbox;
     }
-
     &__button {
       width: 100%;
       margin: 0;

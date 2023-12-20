@@ -34,6 +34,13 @@ main {
   }
 }
 
+// (property to fix title display) //
+.menu__title {
+  .letter-spacing {
+    letter-spacing: 1.6px;
+  }
+}
+
 // cards //
 
 .menu {
@@ -78,17 +85,18 @@ main {
   }
   &__content {
     h3 {
-      @include font($size: 18px, $weight: 500);
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+      margin-bottom: 5px;
+      @include font($size: 18px, $weight: 500);
       transition: width 550ms ease;
     }
     p {
-      @include font($size: 15px, $weight: 300);
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+      @include font($size: 15px, $weight: 300);
       transition: width 550ms ease;
     }
   }
@@ -145,7 +153,7 @@ main {
   transform: translateX(-59px);
 }
 .menu__checkbox:checked ~ .content {
-  width: 70%;
+  width: 100%;
 }
 
 // progressive animation //
